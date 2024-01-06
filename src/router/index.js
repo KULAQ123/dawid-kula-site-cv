@@ -1,0 +1,18 @@
+import { createRouter, createWebHistory } from "vue-router";
+
+const router = createRouter({
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes: [
+    {
+      path: "/",
+      name: "home",
+      component: () => import("../views/HomeView.vue"),
+    },
+    {
+      path: "/polityka-prywatnosci",
+      name: "privacyPolicy",
+      component: () => import("../views/PrivacyPolicyView.vue"),
+    },
+  ],
+});
+export default router;

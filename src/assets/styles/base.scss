@@ -1,0 +1,125 @@
+:root {
+  --font-html-size: 62.5%;
+  --font-body-size: 2rem;
+
+  --content-width: 1440px;
+  --header-height: 100px;
+  --header-footer: 38px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+#app {
+  font-weight: normal;
+}
+
+main {
+  max-width: 100vw;
+  overflow: hidden;
+  min-height: calc(100vh - 300px);
+}
+
+.content {
+  width: var(--content-width);
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+body {
+  line-height: 130%;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  max-width: 100vw;
+  color: var(--color-1);
+  background-color: inherit;
+}
+
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 5rem;
+  font-weight: 400;
+  line-height: normal;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.1rem;
+  font-weight: 400;
+  line-height: normal;
+}
+
+h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.6rem;
+  font-weight: 400;
+  line-height: normal;
+}
+
+h4 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: normal;
+}
+
+h6 {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: normal;
+}
+
+p {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 3rem;
+  letter-spacing: 0.2px;
+  text-align: justify;
+}
+
+strong {
+  font-weight: bold;
+}
+
+label {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  line-height: 3rem;
+  letter-spacing: 0.2px;
+}
+
+@include small-max {
+  h1 {
+    font-size: 3.1rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    line-height: 3rem;
+    letter-spacing: 0.02rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+    line-height: 3rem;
+    letter-spacing: 0.02rem;
+  }
+
+  p {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    letter-spacing: normal;
+  }
+}
