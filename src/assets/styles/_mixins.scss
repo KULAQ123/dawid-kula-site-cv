@@ -1,0 +1,73 @@
+@import "variables";
+
+@mixin ultra-small {
+  @media (max-width: $ultra-small-max) {
+    @content;
+  }
+}
+
+@mixin extra-small {
+  @media (max-width: $extra-small-max) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media (min-width: $small-min) and (max-width: $small-max) {
+    @content;
+  }
+}
+
+@mixin small-max {
+  @media (max-width: $small-max) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (min-width: $medium-min) and (max-width: $medium-max) {
+    @content;
+  }
+}
+
+@mixin medium-min {
+  @media (min-width: $medium-max) {
+    @content;
+  }
+}
+
+@mixin medium-max {
+  @media (max-width: $medium-max) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: $large-min) and (max-width: $large-max) {
+    @content;
+  }
+}
+
+@mixin large-max {
+  @media (max-width: $large-max) {
+    @content;
+  }
+}
+
+@mixin extra-large {
+  @media (min-width: $extra-large-max) and (max-width: $extra-large-max) {
+    @content;
+  }
+}
+
+@mixin extra-large-max {
+  @media (max-width: $extra-large-max) {
+    @content;
+  }
+}
+
+@mixin extra-extra-large {
+  @media (min-width: $extra-extra-large-min) {
+    @content;
+  }
+}
