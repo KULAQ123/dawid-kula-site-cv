@@ -1,10 +1,14 @@
 :root {
   --font-html-size: 62.5%;
-  --font-body-size: 2rem;
+  --font-body-size: 1.6rem;
 
   --content-width: 1440px;
   --header-height: 100px;
   --header-footer: 38px;
+}
+
+html {
+  font-size: var(--font-html-size);
 }
 
 *,
@@ -23,6 +27,7 @@ main {
   max-width: 100vw;
   overflow: hidden;
   min-height: calc(100vh - 300px);
+  background-color: var(--bg-color);
 }
 
 .content {
@@ -33,36 +38,30 @@ main {
 }
 
 body {
-  line-height: 130%;
-  font-family: "Lato", sans-serif;
+  line-height: 1.6;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  //overflow-x: hidden;
   max-width: 100vw;
-  color: var(--color-1);
-  background-color: inherit;
 }
 
-
 h1 {
-  font-family: 'Playfair Display', serif;
   font-size: 5rem;
   font-weight: 400;
   line-height: normal;
 }
 
 h2 {
-  font-family: 'Playfair Display', serif;
   font-size: 3.1rem;
   font-weight: 400;
   line-height: normal;
 }
 
 h3 {
-  font-family: 'Playfair Display', serif;
   font-size: 2.6rem;
   font-weight: 400;
   line-height: normal;
@@ -81,12 +80,9 @@ h6 {
 }
 
 p {
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 400;
-  line-height: 3rem;
-  letter-spacing: 0.2px;
-  text-align: justify;
+  line-height: 24px;
 }
 
 strong {
@@ -94,10 +90,19 @@ strong {
 }
 
 label {
-  font-family: 'Playfair Display', serif;
   font-size: 2rem;
   line-height: 3rem;
   letter-spacing: 0.2px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-2);
+  transition: 0.3s;
+
+  &:hover {
+    color: var(--color-1);
+  }
 }
 
 @include small-max {

@@ -2,5 +2,17 @@
   "locale": {
     "en": "English",
     "pl": "Polski"
+  },
+  "nav": {
+    "home": "Start",
+    "education": "Wykształcenie",
+    "experience": "Doświadczenie",
+    "skills": "Umiejętności",
+    "privacyPolicy": "Polityka prywatności"
+  },
+  "home": {
+    "Title": "Tytuł",
+    "SubTitle": "Pod Tytuł",
+    "Description": "Opis"
   }
 }

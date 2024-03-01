@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="home-view">
     <StartSection></StartSection>
   </main>
 </template>

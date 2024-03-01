@@ -1,8 +1,10 @@
 <template>
   <HeaderComponent></HeaderComponent>
-  <RouterView />
+  <router-view v-slot="{ Component }">
+    <component :is="Component" />
+  </router-view>
   <FooterComponent></FooterComponent>
-  <BackToTopButton></BackToTopButton>
+<!--  <BackToTopButton></BackToTopButton>-->
 </template>
 
 <script setup>
