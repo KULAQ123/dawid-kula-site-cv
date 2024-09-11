@@ -2,5 +2,25 @@
   "locale": {
     "en": "English",
     "pl": "Polski"
+  },
+  "nav": {
+    "home": "O mnie",
+    "education": "Wykształcenie",
+    "experience": "Doświadczenie",
+    "skills": "Umiejętności",
+    "privacyPolicy": "Polityka prywatności",
+    "examples": "Przykłady"
+  },
+  "home": {
+    "downloadCV": "Pobierz CV",
+    "aboutMe": "O mnie",
+    "education": "Wykształcenie"
+  },
+  "contact": {
+    "contactDetails": "Dane kontaktowe",
+    "phone": "Telefon",
+    "domicile": "Miejsce zamieszkania",
+    "email": "Email",
+    "birthday": "Urodziny"
   }
 }
