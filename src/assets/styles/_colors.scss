@@ -1,0 +1,55 @@
+:root {
+  //Main Color
+  --bg-color: #362c44;
+  --main-color: #362c44;
+  --color-white: #ffffff;
+  --black: #000000;
+  --color-1: #a6a6a6;
+  --color-2: #f3ede1;
+  --color-3: #faf7f1;
+  --color-4: #f5f5f4;
+  --color-5: #e3d477;
+  --color-6: #ea2424;
+  --color-7: #555555;
+  --color-gray-100: #44566c;
+
+  //Color Box
+  --color-lightblue: #d4e1ff;
+  --color-blue: #004aff;
+  --color-lightyellow: #fff9d4;
+  --color-yellow: #ffae00;
+  --color-lightviolet: #ead4ff;
+  --color-violet: #8c00ff;
+  --color-lightred: #ffd4d4;
+  --color-red: #ff0000;
+  --color-lightgreen: #d7ffd4;
+  --color-green: #00ff04;
+  --color-orange: #00ff04;
+
+  //Shadow
+  --shadow-1: 0px 10px 20px 0px rgba(12, 38, 159, 0.61);
+  --shadow-2: 9px 0px 25px -20px rgba(66, 68, 90, 1);
+  --shadow-3: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+
+  //Radial Color
+  --color-radial: linear-gradient(
+    90deg,
+    rgb(130, 242, 86) 0%,
+    rgb(183, 47, 237) 100%
+  );
+  --color-radial-2: radial-gradient(
+    circle,
+    rgba(86, 204, 242, 1) 0%,
+    rgba(47, 128, 237, 1) 50%,
+    rgba(144, 58, 255, 1) 100%
+  );
+  --color-radial-3: linear-gradient(
+    128deg,
+    rgba(0, 86, 128, 1) 0%,
+    rgba(73, 0, 119, 1) 100%
+  );
+
+
+  //Transition
+  --transition: 300s;
+}

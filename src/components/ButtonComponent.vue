@@ -1,95 +1,118 @@
 <template>
-  <div class="border-button-component">
-    <RouterLink
-      v-if="href"
-      v-ripple
-      :to="href"
-      class="border-button-container"
-      :class="radius"
-    >
-      {{ text }}
-    </RouterLink>
+  <component
+    v-ripple="ripple"
+    :is="href?.length ? 'a' : to?.length ? 'RouterLink' : 'div'"
+    :href="href"
+    :to="to"
+    class="button-container"
+    :class="{ radius: radius, onlyIcon: onlyIcon, cursor: ripple }"
+    :target="blank ? '_blank' : undefined"
+  >
     <div
-      v-else
-      class="border-button-container"
-      :class="radius"
+      class="content-container"
+      :class="{ 'white-text': whiteText }"
     >
-      {{ text }}
+      <slot name="icon"></slot>
+      <div
+        v-if="!onlyIcon"
+        class="text"
+      >
+        {{ text }}
+      </div>
     </div>
-  </div>
+  </component>
 </template>
 
 <script setup>
 defineProps({
   href: {
     type: String,
-    default: "",
+  },
+  to: {
+    type: String,
   },
   text: {
     type: String,
-    default: "Bezpłatna konsultacja",
   },
   radius: {
     type: Boolean,
+    default: false,
+  },
+  onlyIcon: {
+    type: Boolean,
+    default: false,
+  },
+  whiteText: {
+    type: Boolean,
+    default: false,
+  },
+  blank: {
+    type: Boolean,
+    default: false,
+  },
+  ripple: {
+    type: Boolean,
+    default: true,
   },
 });
 </script>
 
 <style lang="scss" scoped>
-.border-button-component {
-  display: flex;
+.button-container {
+  border-radius: 8px;
+  padding: 10px 18px;
+  color: var(--black);
+  background: var(--color-7);
+  transition: all 0.3s;
+  user-select: none;
 
-  .border-button-container {
-    display: inline-block;
-    position: relative;
-    text-decoration: none;
-    color: var(--color-5);
+  .content-container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    //gap: var(--gap-xm);
+
+    .text {
+      font-weight: 500;
+      font-size: 1rem;
+      line-height: 1.3;
+      padding-left: var(--gap-xm);
+    }
+
+    &.white-text {
+      color: var(--color-white);
+    }
+  }
+
+  &.cursor {
     cursor: pointer;
-    border: 1px solid var(--color-5);
-    text-transform: uppercase;
-    z-index: 1;
-    transition: var(--transition);
-    padding: 15px 20px;
-    font: normal normal 700 1.4rem/1.8rem Rajdhani;
-    letter-spacing: 1.4px;
-    text-align: center;
-    width: 100%;
-    height: 100%;
+  }
 
-    &.radius {
-      border-radius: 24px;
-      padding: 10px 40px;
+  &.radius {
+    animation: anime 15s linear infinite;
+    background: var(--color-radial-2);
+    background-size: 600%;
+  }
+
+  &.onlyIcon {
+    height: 44px;
+    width: 44px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      background: var(--color-white);
     }
+  }
 
-    .btn_bordered-text {
-      font-weight: 600;
-    }
-
-    &:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -1px;
-      right: -1px;
-      height: 100%;
-      z-index: -1;
-      background-color: var(--color-5);
-      transform: scaleX(0);
-      transform-origin: left center;
-      transition:
-        transform var(--transition) ease,
-        transform-origin 0s var(--transition);
-    }
-
-    &:hover,
-    &.active {
-      color: white !important;
-
-      &:before {
-        transform: scaleX(1);
-        transform-origin: right center;
-      }
-    }
+  &:hover {
+    background: var(--color-radial-2);
+    animation: animeGradient 15s linear infinite;
+    background-size: 600%;
+    transform: scale(1.1);
+    transition: all 0.3s;
   }
 }
 </style>

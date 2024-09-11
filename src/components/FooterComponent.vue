@@ -2,12 +2,7 @@
   <footer>
     <div class="content">
       <div class="content-container">
-        <div class="logo-container">
-          <img
-            src="@/assets/images/logo.svg"
-            height="30"
-          />
-        </div>
+        <div class="logo-container"></div>
         <div class="information-container">
           <p>email: dawid3104@onet.pl</p>
           <p>tel: 782503000</p>
@@ -25,6 +20,8 @@
 
 <style scoped>
 footer {
+  display: flex;
+  width: 100%;
   background-color: var(--bg-color);
 }
 </style>

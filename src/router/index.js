@@ -2,9 +2,15 @@ import { createRouter, createWebHistory, RouterView } from "vue-router";
 import Tr from "@/i18n/translation";
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  scrollBehavior() {
-    return { top: 0, behavior: "smooth" };
+  history: createWebHistory(),
+  scrollBehavior(to) {
+    if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: "smooth",
+      };
+    }
+    return { top: 0 };
   },
   routes: [
     {
@@ -21,6 +27,11 @@ const router = createRouter({
           path: "privacy-policy",
           name: "privacyPolicy",
           component: () => import("../views/PrivacyPolicyView.vue"),
+        },
+        {
+          path: "examples",
+          name: "examples",
+          component: () => import("../views/ExamplesView.vue"),
         },
       ],
     },

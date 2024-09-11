@@ -4,15 +4,23 @@
     "pl": "Polski"
   },
   "nav": {
-    "home": "Start",
+    "home": "O mnie",
     "education": "Wykształcenie",
     "experience": "Doświadczenie",
     "skills": "Umiejętności",
-    "privacyPolicy": "Polityka prywatności"
+    "privacyPolicy": "Polityka prywatności",
+    "examples": "Przykłady"
   },
   "home": {
-    "Title": "Tytuł",
-    "SubTitle": "Pod Tytuł",
-    "Description": "Opis"
+    "downloadCV": "Pobierz CV",
+    "aboutMe": "O mnie",
+    "education": "Wykształcenie"
+  },
+  "contact": {
+    "contactDetails": "Dane kontaktowe",
+    "phone": "Telefon",
+    "domicile": "Miejsce zamieszkania",
+    "email": "Email",
+    "birthday": "Urodziny"
   }
 }
