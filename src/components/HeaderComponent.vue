@@ -1,78 +1,31 @@
 <template>
-  <header :class="{ 'sticky-header': isSticky }">
+  <header :class="{ active: isMenuOpen, 'sticky-header': isSticky }">
     <div class="content">
       <div class="logo-container">
         <RouterLink :to="Tr.i18nRoute({ name: 'home' })">
           <img
-            src="@/assets/images/logoDKWhite.png"
-            height="100"
+            src="@/assets/images/DKLogo.png"
+            height="158"
             alt="Logo"
           />
         </RouterLink>
       </div>
-      <div class="navbar-container">
-        <ButtonComponent
-          :to="localizedPath('#start')"
-          :text="$t('nav.home')"
-        >
-          <template #icon> <FontAwesomeIcon :icon="faUser" /></template>
-        </ButtonComponent>
-        <ButtonComponent
-          :to="localizedPath('#education')"
-          :text="$t('nav.education')"
-        >
-          <template #icon
-            ><FontAwesomeIcon :icon="faGraduationCap" />
-          </template>
-        </ButtonComponent>
-        <ButtonComponent
-          :to="localizedPath('#experience')"
-          :text="$t('nav.experience')"
-        >
-          <template #icon><FontAwesomeIcon :icon="faBriefcase" /> </template>
-        </ButtonComponent>
-        <ButtonComponent
-          to="/#skills"
-          :text="$t('nav.skills')"
-        >
-          <template #icon><FontAwesomeIcon :icon="faBarsProgress" /> </template>
-        </ButtonComponent>
-        <ButtonComponent
-          to="/examples"
-          :text="$t('nav.examples')"
-        >
-          <template #icon><FontAwesomeIcon :icon="faLaptopCode" /> </template>
-        </ButtonComponent>
-      </div>
+      <NavbarComponent @toggle-menu="handleToggleMenu"></NavbarComponent>
     </div>
   </header>
 </template>
 
 <script setup>
 import Tr from "@/i18n/translation";
-import ButtonComponent from "@/components/ButtonComponent.vue";
-import {
-  faUser,
-  faGraduationCap,
-  faBriefcase,
-  faLaptopCode,
-  faBarsProgress,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { onBeforeUnmount, onMounted, ref } from "vue";
-import { useI18n } from "vue-i18n";
+import NavbarComponent from "@/components/NavbarComponent.vue";
 
 const isSticky = ref(false);
-const { locale } = useI18n();
+const isMenuOpen = ref(false);
 
-const localizedPath = (hash) => {
-  return `/${locale.value}/${hash}`;
+const handleToggleMenu = (isOpen) => {
+  isMenuOpen.value = isOpen;
 };
-
-// Metody obsługi zdarzeń
-// const handleToggleMenu = (isOpen) => {
-//   isMenuOpen.value = isOpen;
-// };
 
 const handleScroll = () => {
   isSticky.value = window.scrollY > 0;
@@ -90,7 +43,8 @@ onBeforeUnmount(() => {
 
 <style lang="scss">
 header {
-  background-image: url(../assets/images/bg-image.jpg);
+  //background-image: url(../assets/images/bg-image.jpg);
+  background-image: var(--color-radial-4);
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -104,6 +58,10 @@ header {
   position: sticky;
   top: 0;
   z-index: 6;
+
+  &.sticky-header {
+    box-shadow: var(--shadow-3);
+  }
 
   .content {
     display: flex;
@@ -133,6 +91,7 @@ header {
 
         img {
           height: 100%;
+          mix-blend-mode: multiply;
         }
       }
     }
@@ -144,15 +103,53 @@ header {
 
       svg {
         height: 20px;
-        color: var(--color-white);
+        color: var(--white);
       }
 
       .button-container {
         .content-container {
           .text {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--color-white);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--white);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  header {
+    justify-content: space-between;
+    padding: 0 16px;
+    transition: background 0.3s;
+    transition-delay: 0.3s;
+    box-shadow: var(--shadow2);
+
+    .content {
+      justify-content: space-between;
+      padding: 0 !important;
+
+      .header-container {
+        padding: 20px 16px 10px;
+
+        .login-button {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  header {
+    .content {
+      .header-container {
+        a {
+          img {
+            width: 120px;
+            height: 100%;
           }
         }
       }

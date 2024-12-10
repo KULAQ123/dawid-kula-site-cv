@@ -109,13 +109,13 @@ import ButtonComponent from "@/components/ButtonComponent.vue";
 import InformationCard from "@/components/ui/InformationCard.vue";
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .information-container {
   display: flex;
-  gap: var(--gap-s);
+  gap: var(--gap-m);
 
   .image-information {
-    height: 330px;
+    max-height: 330px;
     border-radius: 20px;
     overflow: hidden;
     width: 25%;
@@ -132,7 +132,7 @@ import InformationCard from "@/components/ui/InformationCard.vue";
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: var(--gap-s);
+    gap: var(--gap-m);
 
     h2 {
       font-size: 26px;
@@ -148,7 +148,7 @@ import InformationCard from "@/components/ui/InformationCard.vue";
 
     .info-container {
       display: flex;
-      gap: var(--gap-s);
+      gap: var(--gap-m);
       flex-wrap: wrap;
 
       .button-container {
@@ -163,7 +163,32 @@ import InformationCard from "@/components/ui/InformationCard.vue";
       }
 
       svg {
-        color: var(--color-white);
+        color: var(--white);
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+}
+
+@media (max-width: 850px) {
+  .information-container {
+    flex-direction: column;
+
+    .image-information {
+      width: 100%;
+      max-width: 400px;
+      margin: auto;
+      max-height: 100%;
+    }
+
+    .description-container {
+      .info-container {
+        flex-direction: column;
+
+        .information-card-container {
+        }
       }
     }
   }

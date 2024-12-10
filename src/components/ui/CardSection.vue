@@ -13,8 +13,6 @@
 </template>
 
 <script setup>
-import { defineProps } from "vue";
-
 const props = defineProps({
   cardTitle: {
     type: String,
@@ -22,7 +20,7 @@ const props = defineProps({
 });
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 section {
   padding-top: 100px;
 
@@ -32,7 +30,7 @@ section {
       flex-direction: column;
       border-radius: 20px;
       //margin-top: 100px;
-      //background: var(--color-white);
+      //background: var(--white);
       background: rgb(255, 255, 255);
       background: radial-gradient(
         circle,
@@ -46,6 +44,7 @@ section {
         display: flex;
         align-items: center;
         gap: var(--gap-m);
+        white-space: nowrap;
 
         .line-gradient {
           width: 200px;
@@ -55,6 +54,17 @@ section {
           background-size: 600%;
           animation: animeGradient 15s linear infinite;
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  section {
+    .content {
+      .card-section {
+        padding: 40px 40px;
+        gap: var(--gap-s);
       }
     }
   }

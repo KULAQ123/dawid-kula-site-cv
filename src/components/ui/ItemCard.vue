@@ -49,7 +49,6 @@
 </template>
 
 <script setup>
-import { defineProps } from "vue";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 defineProps({
@@ -73,7 +72,7 @@ defineProps({
   border-radius: 20px;
   padding: 20px;
   width: calc(33.33% - 20px);
-  max-height: 190px;
+  max-height: 100%;
   box-shadow: var(--shadow-2);
 
   .item-text {
@@ -95,7 +94,7 @@ defineProps({
   .icon {
     width: 45px;
     height: 45px;
-    margin-right: 10px;
+    margin-right: 15px;
   }
 
   &.bg-item-blue {
@@ -143,6 +142,25 @@ defineProps({
 
     .color-icon-orange {
       color: var(--color-orange);
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .item-container {
+    .card-container {
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .item-container {
+    width: 100%;
+    max-height: 100%;
+    gap: 15px;
+
+    .card-container {
+      flex-direction: column;
     }
   }
 }

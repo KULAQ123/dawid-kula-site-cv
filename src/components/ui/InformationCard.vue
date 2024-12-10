@@ -36,7 +36,7 @@ defineProps({
 .information-card-container {
   display: flex;
   align-items: center;
-  gap: var(--gap-xm);
+  gap: var(--gap-xs);
   min-width: 40%;
 
   &.link {
