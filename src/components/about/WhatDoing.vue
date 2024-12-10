@@ -39,7 +39,7 @@ const icons = {
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .what-doing-container {
   display: flex;
   flex-direction: column;
@@ -63,6 +63,21 @@ const icons = {
     flex-wrap: wrap;
     align-items: center;
     gap: 24px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .what-doing-container {
+    .card-container {
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .what-doing-container {
+    .card-container {
+      flex-direction: column;
+    }
   }
 }
 </style>

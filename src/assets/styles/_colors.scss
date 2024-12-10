@@ -2,7 +2,7 @@
   //Main Color
   --bg-color: #362c44;
   --main-color: #362c44;
-  --color-white: #ffffff;
+  --white: #ffffff;
   --black: #000000;
   --color-1: #a6a6a6;
   --color-2: #f3ede1;
@@ -49,6 +49,7 @@
     rgba(73, 0, 119, 1) 100%
   );
 
+  --color-radial-4: linear-gradient(to bottom, #4286f4, #373B44);
 
   //Transition
   --transition: 300s;

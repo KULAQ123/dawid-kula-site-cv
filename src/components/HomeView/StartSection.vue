@@ -125,7 +125,7 @@ const downloadFile = async () => {
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .home-banner {
   display: flex;
   width: 100%;
@@ -140,7 +140,8 @@ const downloadFile = async () => {
       gap: var(--gap-l);
 
       .personal-container {
-        width: 400px;
+        width: 100%;
+        max-width: 400px;
         height: 400px;
         border-radius: 100%;
         margin-left: auto;
@@ -165,7 +166,7 @@ const downloadFile = async () => {
         flex-direction: column;
         align-items: center;
         color: var(--color-2);
-        gap: var(--gap-xm);
+        gap: var(--gap-xs);
       }
 
       .social-container {
@@ -194,5 +195,11 @@ const downloadFile = async () => {
       }
     }
   }
+}
+
+@media (max-width: 1000px) {
+}
+
+@media (max-width: 850px) {
 }
 </style>
