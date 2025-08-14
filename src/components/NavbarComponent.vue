@@ -111,7 +111,7 @@ onBeforeUnmount(() => {
 .nav-container {
   display: flex;
   justify-content: space-between;
-  min-width: 550px;
+  min-width: 350px;
   max-width: 100%;
   align-items: center;
   gap: 50px;
@@ -162,9 +162,9 @@ onBeforeUnmount(() => {
       display: flex;
       -ms-flex-direction: column;
       flex-direction: column;
-      height: 2.8rem;
+      height: 2.3rem;
       justify-content: space-between;
-      width: 3.7rem;
+      width: 2.9rem;
 
       .line {
         background: var(--white);
@@ -191,7 +191,7 @@ onBeforeUnmount(() => {
   }
 }
 
-@media (max-width: 1000px) {
+@include medium-max {
   .nav-container {
     width: unset;
     min-width: unset;
@@ -210,6 +210,7 @@ onBeforeUnmount(() => {
       overflow: hidden;
       transition: height 0.3s;
       box-shadow: var(--shadow-3);
+      z-index: 5;
 
       &.hidden {
         height: 0 !important;
@@ -242,5 +243,8 @@ onBeforeUnmount(() => {
       display: flex;
     }
   }
+}
+
+@include small-max {
 }
 </style>

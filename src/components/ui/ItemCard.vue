@@ -1,5 +1,8 @@
 <template>
-  <div
+  <ScrollAnimation
+    animationType="slide-bottom"
+    :duration="500"
+    :delay="100"
     class="item-container"
     :class="{
       'bg-item-blue': blue,
@@ -45,11 +48,12 @@
         <p>{{ cardDescription }}</p>
       </div>
     </div>
-  </div>
+  </ScrollAnimation>
 </template>
 
 <script setup>
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import ScrollAnimation from "@/components/ScrollAnimation.vue";
 
 defineProps({
   cardIcon: Object,
@@ -67,11 +71,17 @@ defineProps({
 </script>
 
 <style scoped lang="scss">
+.scroll-animation {
+  display: flex;
+  max-width: calc(33.33% - 20px);
+}
+
 .item-container {
   display: flex;
   border-radius: 20px;
   padding: 20px;
-  width: calc(33.33% - 20px);
+  flex: 1 1 calc(33.33% - var(--gap-m));
+  max-width: calc(33.33% - 20px);
   max-height: 100%;
   box-shadow: var(--shadow-2);
 
@@ -146,18 +156,20 @@ defineProps({
   }
 }
 
-@media (max-width: 1000px) {
+@include medium-max {
   .item-container {
+    flex: 1 1 calc(50% - var(--gap-m)); /* 50% szerokości */
+    max-width: calc(50% - 20px);
+
     .card-container {
     }
   }
 }
 
-@media (max-width: 850px) {
+@include small-max {
   .item-container {
-    width: 100%;
-    max-height: 100%;
-    gap: 15px;
+    flex: 1 1 100%;
+    max-width: 100%;
 
     .card-container {
       flex-direction: column;

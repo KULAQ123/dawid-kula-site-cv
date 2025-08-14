@@ -1,3 +1,5 @@
+@use "./_mixins" as *;
+
 :root {
   --font-html-size: 62.5%;
   --font-body-size: 1.6rem;
@@ -14,4 +16,8 @@
   --gap-xl: 64px;
 
   --transition: 300s;
+
+  @include small-max {
+    --header-height: 60px;
+  }
 }

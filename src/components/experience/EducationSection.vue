@@ -104,7 +104,8 @@ import ExperienceContainer from "@/components/ui/ExperienceContainer.vue";
 <style scoped lang="scss">
 .experience-content {
   display: flex;
-  gap: 20px;
   flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: var(--gap-m);
 }
 </style>

@@ -115,4 +115,13 @@ defineProps({
     transition: all 0.3s;
   }
 }
+
+@include medium-max {
+  .button-container {
+    &:hover {
+      background-size: unset;
+      transform: unset;
+    }
+  }
+}
 </style>

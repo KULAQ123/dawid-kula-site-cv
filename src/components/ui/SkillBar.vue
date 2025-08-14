@@ -4,13 +4,16 @@
     ref="skillBarElement"
   >
     <div class="label">
-      <span class="text-lg">{{ skillName }}</span>
-      <span class="text-lg">{{ percentage }}%</span>
+      <span class="text-lg color-gray">{{ skillName }}</span>
+      <span class="text-lg color-gray">{{ percentage }}%</span>
     </div>
     <div class="bar-container">
       <div
         class="bar-fill"
-        :style="{ width: percentage + '%', backgroundColor: skillColor }"
+        :style="{
+          width: animatedPercentage + '%',
+          backgroundColor: skillColor,
+        }"
       ></div>
     </div>
   </div>
@@ -20,43 +23,40 @@
 import { ref, onMounted } from "vue";
 
 const props = defineProps({
-  skillName: {
-    type: String,
-    required: true,
-  },
-  percentage: {
-    type: Number,
-    required: true,
-    validator: (value) => value >= 0 && value <= 100,
-  },
-  skillColor: {
-    type: String,
-    required: true,
-  },
+  skillName: String,
+  percentage: Number,
+  skillColor: String,
 });
 
 const skillBarElement = ref(null);
 const animatedPercentage = ref(0);
+let hasAnimated = false;
 
-// Funkcja uruchamiająca animację, kiedy pasek postępu pojawi się na ekranie
 const handleIntersection = (entries) => {
   const entry = entries[0];
-  if (entry.isIntersecting) {
-    // Uruchom animację - od 0 do wartości `percentage`
-    let start = 0;
-    const end = entry.target.dataset.percentage;
-    const duration = 1000;
-    const stepTime = 15; // co ile ms zmieniać wartość
-    const step = (end - start) / (duration / stepTime);
+  if (entry.isIntersecting && !hasAnimated) {
+    hasAnimated = true;
 
-    const interval = setInterval(() => {
-      if (start < end) {
-        start += step;
-        animatedPercentage.value = Math.min(start, end);
-      } else {
-        clearInterval(interval);
+    let startTimestamp = null;
+    const duration = 3000; // czas trwania animacji w ms
+    const startValue = 0;
+    const endValue = props.percentage;
+
+    const animate = (timestamp) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+
+      // easing (płynne przyspieszenie i zwolnienie)
+      const ease = 1 - Math.pow(1 - progress, 3); // easeOutCubic
+
+      animatedPercentage.value = startValue + (endValue - startValue) * ease;
+
+      if (progress < 1) {
+        requestAnimationFrame(animate);
       }
-    }, stepTime);
+    };
+
+    requestAnimationFrame(animate);
   }
 };
 
@@ -66,7 +66,6 @@ onMounted(() => {
   });
 
   if (skillBarElement.value) {
-    skillBarElement.value.dataset.percentage = props.percentage;
     observer.observe(skillBarElement.value);
   }
 });
@@ -95,8 +94,14 @@ onMounted(() => {
     .bar-fill {
       height: 100%;
       border-radius: 10px 0 0 10px;
-      transition: width 0.5s ease-in-out;
+      //transition: width 0.5s ease-in-out;
+      transition: width 0.1s linear;
     }
   }
+}
+@include medium-max {
+}
+
+@include small-max {
 }
 </style>

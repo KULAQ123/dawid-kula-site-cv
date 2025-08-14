@@ -61,8 +61,8 @@ const icons = {
   .card-container {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    gap: 24px;
+    justify-content: flex-start;
+    gap: var(--gap-m);
   }
 }
 
