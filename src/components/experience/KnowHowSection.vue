@@ -42,7 +42,7 @@ const rightSkills = computed(() => SkillsPercentData.slice(middleIndex));
   }
 }
 
-@media (max-width: 850px) {
+@include small-max {
   .know-how-container {
     flex-direction: column;
     gap: unset;

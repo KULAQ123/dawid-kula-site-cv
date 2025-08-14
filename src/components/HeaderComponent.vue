@@ -4,7 +4,7 @@
       <div class="logo-container">
         <RouterLink :to="Tr.i18nRoute({ name: 'home' })">
           <img
-            src="@/assets/images/DKLogo.png"
+            src="@/assets/images/Logo.png"
             height="158"
             alt="Logo"
           />
@@ -76,7 +76,7 @@ header {
       display: flex;
       align-items: center;
       height: 100%;
-      padding: 10px 0;
+      padding: 5px 0;
 
       svg {
         width: 200px;
@@ -91,7 +91,7 @@ header {
 
         img {
           height: 100%;
-          mix-blend-mode: multiply;
+          //mix-blend-mode: multiply;
         }
       }
     }
@@ -119,7 +119,7 @@ header {
   }
 }
 
-@media (max-width: 1000px) {
+@include medium-max {
   header {
     justify-content: space-between;
     padding: 0 16px;
@@ -142,7 +142,7 @@ header {
   }
 }
 
-@media (max-width: 850px) {
+@include small-max {
   header {
     .content {
       .header-container {

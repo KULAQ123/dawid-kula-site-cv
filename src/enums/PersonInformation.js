@@ -1,8 +1,11 @@
 export const PersonInformation = {
   name: "Dawid",
   lastName: "Kula",
-  workplaceFirst: "Junior Frontend Developer",
-  workplaceSecond: "Junior Marketing Specialist",
+  workplace: [
+    "Frontend Developer",
+    "Marketing Specialist",
+    "Tester Oprogramowania",
+  ],
   softwareTester: "Software tester",
   phone: "782503000",
   home: "Olesno, opolskie",

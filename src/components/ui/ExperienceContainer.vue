@@ -1,14 +1,22 @@
 <template>
   <div class="experience-container">
-    <div class="title-experience">
-      <slot name="icon"></slot>
-      <div class="text-xl">{{ title }}</div>
-    </div>
+    <ScrollAnimation
+      animationType="scale"
+      :duration="500"
+      :delay="100"
+    >
+      <div class="title-experience">
+        <slot name="icon"></slot>
+        <div class="text-xl">{{ title }}</div>
+      </div>
+    </ScrollAnimation>
     <slot name="content"></slot>
   </div>
 </template>
 
 <script setup>
+import ScrollAnimation from "@/components/ScrollAnimation.vue";
+
 defineProps({
   title: String,
 });
@@ -24,6 +32,7 @@ defineProps({
     display: flex;
     align-items: center;
     gap: 10px;
+    width: fit-content;
   }
 }
 </style>

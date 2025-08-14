@@ -3,8 +3,20 @@
     <div class="content">
       <div class="card-section">
         <div class="section-title">
-          <h1>{{ props.cardTitle }}</h1>
-          <div class="line-gradient"></div>
+          <ScrollAnimation
+            animationType="slide-left"
+            :duration="500"
+            :delay="100"
+          >
+            <h1>{{ props.cardTitle }}</h1>
+          </ScrollAnimation>
+          <ScrollAnimation
+            animationType="slide-left"
+            :duration="500"
+            :delay="100"
+          >
+            <div class="line-gradient"></div>
+          </ScrollAnimation>
         </div>
         <slot></slot>
       </div>
@@ -13,6 +25,8 @@
 </template>
 
 <script setup>
+import ScrollAnimation from "@/components/ScrollAnimation.vue";
+
 const props = defineProps({
   cardTitle: {
     type: String,
@@ -59,12 +73,21 @@ section {
   }
 }
 
-@media (max-width: 850px) {
+@include medium-max {
+}
+
+@include small-max {
   section {
     .content {
       .card-section {
         padding: 40px 40px;
         gap: var(--gap-s);
+
+        .section-title {
+          .line-gradient {
+            width: 100px;
+          }
+        }
       }
     }
   }

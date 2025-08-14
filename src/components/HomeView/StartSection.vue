@@ -12,7 +12,7 @@
           <h3 class="heading-lg">
             {{ PersonInformation.name }} {{ PersonInformation.lastName }}
           </h3>
-          <h5 class="heading-md">{{ PersonInformation.workplaceFirst }}</h5>
+          <AnimatedText :texts="PersonInformation.workplace" />
         </div>
         <div class="social-container">
           <ButtonComponent
@@ -60,7 +60,7 @@
                 /> </span></template
           ></ButtonComponent>
           <ButtonComponent
-            href="https://www.facebook.com/dawid.kula"
+            href="https://www.linkedin.com/in/dawid-kula-97256623b/"
             onlyIcon
             ripple
             blank
@@ -104,6 +104,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import { PersonInformation } from "@/enums/PersonInformation";
+import AnimatedText from "@/components/ui/AnimatedText.vue";
 
 const downloadFile = async () => {
   try {
@@ -141,11 +142,10 @@ const downloadFile = async () => {
 
       .personal-container {
         width: 100%;
-        max-width: 400px;
-        height: 400px;
-        border-radius: 100%;
-        margin-left: auto;
-        margin-right: auto;
+        max-width: 360px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        margin: 0 auto;
         display: flex;
         overflow: hidden;
         user-select: none;
@@ -197,9 +197,23 @@ const downloadFile = async () => {
   }
 }
 
-@media (max-width: 1000px) {
+@include medium-max {
 }
 
-@media (max-width: 850px) {
+@include small-max {
+  .home-banner {
+    display: flex;
+    width: 100%;
+
+    .content {
+      .banner-container {
+        gap: var(--gap-m);
+
+        .personal-container {
+          max-width: 250px;
+        }
+      }
+    }
+  }
 }
 </style>
