@@ -1,7 +1,7 @@
 <template>
   <div class="experience-container">
     <ScrollAnimation
-      animationType="scale"
+      animation-type="scale"
       :duration="500"
       :delay="100"
     >

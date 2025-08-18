@@ -5,15 +5,15 @@
       <ItemCard
         v-for="(item, index) in WhatDoingData"
         :key="index"
-        :cardIcon="icons[item.cardIcon]"
-        :cardTitle="item.cardTitle"
-        :cardDescription="item.cardDescription"
+        :card-icon="icons[item.cardIcon]"
+        :card-title="item.cardTitle"
+        :card-description="item.cardDescription"
         :blue="item.blue || false"
         :yellow="item.yellow || false"
         :green="item.green || false"
         :red="item.red || false"
         :violet="item.violet || false"
-        minHeight="190px"
+        min-height="190px"
       ></ItemCard>
     </div>
   </div>

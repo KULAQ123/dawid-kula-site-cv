@@ -1,7 +1,7 @@
 <template>
   <div
-    class="skill-bar"
     ref="skillBarElement"
+    class="skill-bar"
   >
     <div class="label">
       <span class="text-lg color-gray">{{ skillName }}</span>

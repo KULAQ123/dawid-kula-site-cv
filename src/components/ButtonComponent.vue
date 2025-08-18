@@ -1,7 +1,7 @@
 <template>
   <component
-    v-ripple="ripple"
     :is="href?.length ? 'a' : to?.length ? 'RouterLink' : 'div'"
+    v-ripple="ripple"
     :href="href"
     :to="to"
     class="button-container"

@@ -8,18 +8,18 @@
     <template #content>
       <div class="experience-content">
         <ItemCard
-          cardYears="2016-2019"
-          cardHead="Technik Architektury Krajobrazu"
-          cardDescription="Zespół Szkół Ogólnokształcących w Oleśnie"
+          card-years="2016-2019"
+          card-head="Technik Architektury Krajobrazu"
+          card-description="Zespół Szkół Ogólnokształcących w Oleśnie"
           blue
-          minHeight="120px"
+          min-height="120px"
         />
         <ItemCard
-          cardYears="2019-2023"
-          cardHead="Studia informatyczne"
-          cardDescription="Politechnika Opolska"
+          card-years="2019-2023"
+          card-head="Studia informatyczne"
+          card-description="Politechnika Opolska"
           red
-          minHeight="120px"
+          min-height="120px"
         />
       </div>
     </template>
@@ -33,25 +33,25 @@
     <template #content>
       <div class="experience-content">
         <ItemCard
-          cardYears="Wrzesień 2022"
-          cardHead="Praktyka Tester/Frontend"
-          cardDescription="Digital Holding Sp. z o.o."
+          card-years="Wrzesień 2022"
+          card-head="Praktyka Tester/Frontend"
+          card-description="Digital Holding Sp. z o.o."
           blue
-          minHeight="120px"
+          min-height="120px"
         />
         <ItemCard
-          cardYears="Kwiecień 2023 - Grudzień 2023"
-          cardHead="Staż Frontend - Vue"
-          cardDescription="Digital Holding Sp. z o.o."
+          card-years="Kwiecień 2023 - Grudzień 2023"
+          card-head="Staż Frontend - Vue"
+          card-description="Digital Holding Sp. z o.o."
           red
-          minHeight="120px"
+          min-height="120px"
         />
         <ItemCard
-          cardYears="Styczeń 2024 - Obecnie"
-          cardHead="Junior Frontend Developer"
-          cardDescription="Digital Holding Sp. z o.o."
+          card-years="Styczeń 2024 - Obecnie"
+          card-head="Junior Frontend Developer"
+          card-description="Digital Holding Sp. z o.o."
           violet
-          minHeight="120px"
+          min-height="120px"
         />
       </div>
     </template>
@@ -65,25 +65,25 @@
     <template #content>
       <div class="experience-content">
         <ItemCard
-          cardYears="Lipiec 2022"
-          cardHead="Kurs Bootstrap 4 - od podstaw"
-          cardDescription="Strefa kursów"
+          card-years="Lipiec 2022"
+          card-head="Kurs Bootstrap 4 - od podstaw"
+          card-description="Strefa kursów"
           blue
-          minHeight="120px"
+          min-height="120px"
         />
         <ItemCard
-          cardYears="Luty 2023"
-          cardHead="Fundamenty programowania"
-          cardDescription="Strefa kursów"
+          card-years="Luty 2023"
+          card-head="Fundamenty programowania"
+          card-description="Strefa kursów"
           red
-          minHeight="120px"
+          min-height="120px"
         />
         <ItemCard
-          cardYears="Marzec 2023"
-          cardHead="Ekosystem JavaScript - wprowadzenie"
-          cardDescription="Strefa kursów"
+          card-years="Marzec 2023"
+          card-head="Ekosystem JavaScript - wprowadzenie"
+          card-description="Strefa kursów"
           violet
-          minHeight="120px"
+          min-height="120px"
         />
       </div>
     </template>
