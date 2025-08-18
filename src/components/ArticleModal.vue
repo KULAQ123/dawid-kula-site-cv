@@ -36,7 +36,6 @@
 </template>
 
 <script setup>
-import { defineProps, defineEmits } from "vue";
 import SwiperComponent from "@/components/ui/SwiperComponent.vue";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";

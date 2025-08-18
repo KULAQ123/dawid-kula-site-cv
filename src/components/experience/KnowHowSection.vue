@@ -4,18 +4,18 @@
       <SkillBar
         v-for="(skill, index) in leftSkills"
         :key="index"
-        :skillName="skill.skillName"
+        :skill-name="skill.skillName"
         :percentage="skill.skillPercent"
-        :skillColor="skill.skillColor"
+        :skill-color="skill.skillColor"
       />
     </div>
     <div class="skill-column">
       <SkillBar
         v-for="(skill, index) in rightSkills"
         :key="index"
-        :skillName="skill.skillName"
+        :skill-name="skill.skillName"
         :percentage="skill.skillPercent"
-        :skillColor="skill.skillColor"
+        :skill-color="skill.skillColor"
       />
     </div>
   </div>

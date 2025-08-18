@@ -17,7 +17,7 @@
         <div class="social-container">
           <ButtonComponent
             href="https://www.facebook.com/dawid.kula"
-            onlyIcon
+            only-icon
             ripple
             blank
             class="facebook"
@@ -31,7 +31,7 @@
           ></ButtonComponent>
           <ButtonComponent
             href="https://x.com/KULAQOFFICIAL"
-            onlyIcon
+            only-icon
             ripple
             blank
             class="twitter"
@@ -45,7 +45,7 @@
           ></ButtonComponent>
           <ButtonComponent
             href="https://www.instagram.com/kulaq/"
-            onlyIcon
+            only-icon
             ripple
             blank
             class="instagram"
@@ -61,7 +61,7 @@
           ></ButtonComponent>
           <ButtonComponent
             href="https://www.linkedin.com/in/dawid-kula-97256623b/"
-            onlyIcon
+            only-icon
             ripple
             blank
             class="linkedIn"
@@ -75,7 +75,7 @@
           ></ButtonComponent>
         </div>
         <ButtonComponent
-          whiteText
+          white-text
           radius
           ripple
           :text="$t('home.downloadCV')"

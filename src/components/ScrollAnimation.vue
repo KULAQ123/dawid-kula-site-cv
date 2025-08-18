@@ -8,7 +8,7 @@
 </template>
 
 <script setup>
-import { defineProps, computed } from "vue";
+import { computed } from "vue";
 
 // Props dla konfiguracji animacji
 const props = defineProps({

@@ -1,6 +1,6 @@
 <template>
   <ScrollAnimation
-    animationType="slide-bottom"
+    animation-type="slide-bottom"
     :duration="500"
     :delay="100"
     class="item-container"

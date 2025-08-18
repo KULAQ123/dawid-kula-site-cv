@@ -3,7 +3,7 @@
     <ArticleCard
       v-for="(project, index) in projects"
       :key="index"
-      :imgLink="project.image"
+      :img-link="project.image"
       :title="project.title"
       :subtitle="project.subtitle"
       @click="openModal(project)"
@@ -12,7 +12,7 @@
 
   <ArticleModal
     v-if="isModalOpen"
-    :isOpen="isModalOpen"
+    :is-open="isModalOpen"
     :project="selectedProject"
     @close="closeModal"
   />

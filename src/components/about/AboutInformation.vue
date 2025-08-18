@@ -1,7 +1,7 @@
 <template>
   <div class="information-container">
     <ScrollAnimation
-      animationType="scale"
+      animation-type="scale"
       :duration="500"
       :delay="100"
       class="scroll-animation-image"
@@ -14,7 +14,7 @@
       </div>
     </ScrollAnimation>
     <ScrollAnimation
-      animationType="slide-right"
+      animation-type="slide-right"
       :duration="500"
       :delay="100"
     >
@@ -42,7 +42,7 @@
             title="782 503 000"
           >
             <template #button>
-              <ButtonComponent onlyIcon>
+              <ButtonComponent only-icon>
                 <template #icon>
                   <FontAwesomeIcon
                     :icon="faMobileScreenButton"
@@ -58,7 +58,7 @@
           >
             <template #button>
               <ButtonComponent
-                onlyIcon
+                only-icon
                 :ripple="false"
               >
                 <template #icon>
@@ -76,7 +76,7 @@
             title="dawid3104@onet.pl"
           >
             <template #button>
-              <ButtonComponent onlyIcon>
+              <ButtonComponent only-icon>
                 <template #icon>
                   <FontAwesomeIcon
                     :icon="faEnvelope"
@@ -92,7 +92,7 @@
           >
             <template #button>
               <ButtonComponent
-                onlyIcon
+                only-icon
                 :ripple="false"
               >
                 <template #icon>

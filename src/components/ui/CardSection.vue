@@ -4,14 +4,14 @@
       <div class="card-section">
         <div class="section-title">
           <ScrollAnimation
-            animationType="slide-left"
+            animation-type="slide-left"
             :duration="500"
             :delay="100"
           >
             <h1>{{ props.cardTitle }}</h1>
           </ScrollAnimation>
           <ScrollAnimation
-            animationType="slide-left"
+            animation-type="slide-left"
             :duration="500"
             :delay="100"
           >
