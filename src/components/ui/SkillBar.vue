@@ -74,7 +74,8 @@ onMounted(() => {
 <style scoped lang="scss">
 .skill-bar {
   //margin-bottom: 1rem;
-  font-family: Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
   margin-bottom: 30px;
 
   .label {

@@ -1,7 +1,7 @@
 <template>
   <CardSection
     id="start"
-    card-title="O mnie"
+    card-title="Poznaj mnie"
   >
     <AboutInformation></AboutInformation>
     <WhatDoing></WhatDoing>

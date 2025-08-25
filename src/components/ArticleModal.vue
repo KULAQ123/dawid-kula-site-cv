@@ -1,44 +1,33 @@
 <template>
-  <div
-    class="modal-overlay"
-    @click="closeModal"
+  <ModalComponent
+    :is-open="isOpen"
+    @close="closeModal"
   >
-    <div
-      class="modal-content"
-      @click.stop
-    >
-      <div class="modal-header">
-        <button
-          class="close-button"
-          @click="closeModal"
-        >
-          <FontAwesomeIcon :icon="faXmark" />
-        </button>
+    <div class="article-container small-scroll">
+      <div class="img-container">
+        <img
+          :src="project.image"
+          alt="Project Image"
+        />
       </div>
-      <div class="article-container small-scroll">
-        <div class="img-container">
-          <img
-            :src="project.image"
-            alt="Project Image"
-          />
-        </div>
-        <div class="article-description">
-          <h2>{{ project.title }}</h2>
-          <p>{{ project.mainDescription.part1 }}</p>
-          <p>{{ project.mainDescription.part2 }}</p>
-        </div>
-        <div class="gallery">
-          <SwiperComponent :images="project.gallery"></SwiperComponent>
-        </div>
+      <div class="article-description">
+        <h2 class="heading-lg">{{ project.title }}</h2>
+        <p>{{ project.mainDescription.part1 }}</p>
+        <p>{{ project.mainDescription.part2 }}</p>
+      </div>
+      <div class="gallery">
+        <SwiperComponent
+          :images="project.gallery"
+          @open="openGalleryModal"
+        />
       </div>
     </div>
-  </div>
+  </ModalComponent>
 </template>
 
 <script setup>
 import SwiperComponent from "@/components/ui/SwiperComponent.vue";
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import ModalComponent from "@/components/ModalComponent.vue";
 
 defineProps({
   isOpen: Boolean,
@@ -46,10 +35,7 @@ defineProps({
 });
 
 const emit = defineEmits(["close"]);
-
-const closeModal = () => {
-  emit("close");
-};
+const closeModal = () => emit("close");
 </script>
 
 <style scoped lang="scss">
@@ -95,27 +81,31 @@ const closeModal = () => {
       display: flex;
       width: 100%;
       flex-direction: column;
-      padding: 60px;
       overflow-y: auto;
       flex: 1;
 
       .img-container {
         display: flex;
+        justify-content: center;
         height: 500px;
         margin-top: 0;
 
         img {
-          width: 100%;
+          object-fit: cover;
         }
       }
 
       .article-description {
         margin-left: auto;
         margin-right: auto;
-        padding-top: 40px;
+        padding: 40px 60px 40px 60px;
         display: flex;
         flex-direction: column;
         gap: 20px;
+
+        p {
+          font-family: "Lora", serif;
+        }
       }
 
       .gallery {
