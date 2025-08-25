@@ -8,6 +8,12 @@
     :class="{ radius: radius, onlyIcon: onlyIcon, cursor: ripple }"
     :target="blank ? '_blank' : undefined"
   >
+    <v-tooltip
+      v-if="tooltip"
+      activator="parent"
+      :location="locationTooltip"
+      >{{ textTooltip }}</v-tooltip
+    >
     <div
       class="content-container"
       :class="{ 'white-text': whiteText }"
@@ -34,6 +40,13 @@ defineProps({
   text: {
     type: String,
   },
+  textTooltip: {
+    type: String,
+  },
+  locationTooltip: {
+    type: String,
+    default: "top",
+  },
   radius: {
     type: Boolean,
     default: false,
@@ -53,6 +66,10 @@ defineProps({
   ripple: {
     type: Boolean,
     default: true,
+  },
+  tooltip: {
+    type: Boolean,
+    default: false,
   },
 });
 </script>

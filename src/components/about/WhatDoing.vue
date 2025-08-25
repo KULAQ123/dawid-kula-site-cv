@@ -1,6 +1,12 @@
 <template>
   <div class="what-doing-container">
-    <div class="header-text"><h2>Czym się zajmuję?</h2></div>
+    <ScrollAnimation
+      animation-type="slide-left"
+      :duration="500"
+      :delay="100"
+    >
+      <div class="header-text"><h2>Czym się zajmuję?</h2></div>
+    </ScrollAnimation>
     <div class="card-container">
       <ItemCard
         v-for="(item, index) in WhatDoingData"
@@ -29,6 +35,7 @@ import {
   faBook,
 } from "@fortawesome/free-solid-svg-icons";
 import { WhatDoingData } from "@/enums/WhatDoing";
+import ScrollAnimation from "@/components/ScrollAnimation.vue";
 
 const icons = {
   faCode,
@@ -51,10 +58,9 @@ const icons = {
     h2 {
       margin-top: 0;
       margin-bottom: 0;
-      font-family: Poppins, sans-serif;
       font-size: 36px;
       font-weight: 500;
-      line-height: 1em;
+      line-height: 1.2em;
     }
   }
 

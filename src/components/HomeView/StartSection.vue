@@ -16,59 +16,33 @@
         </div>
         <div class="social-container">
           <ButtonComponent
-            href="https://www.facebook.com/dawid.kula"
+            href="https://www.linkedin.com/in/dawid-kula-97256623b/"
             only-icon
             ripple
             blank
-            class="facebook"
+            class="linkedIn"
+            tooltip
+            text-tooltip="Mój LinkedIn"
           >
             <template #icon>
               <FontAwesomeIcon
-                :icon="faFacebookF"
+                :icon="faLinkedin"
                 fade
                 style="--fa-animation-duration: 2s; --fa-fade-opacity: 0.6"
               /> </template
-          ></ButtonComponent>
-          <ButtonComponent
-            href="https://x.com/KULAQOFFICIAL"
-            only-icon
-            ripple
-            blank
-            class="twitter"
-          >
-            <template #icon>
-              <FontAwesomeIcon
-                :icon="faXTwitter"
-                fade
-                style="--fa-animation-duration: 2s; --fa-fade-opacity: 0.6"
-              /> </template
-          ></ButtonComponent>
-          <ButtonComponent
-            href="https://www.instagram.com/kulaq/"
-            only-icon
-            ripple
-            blank
-            class="instagram"
-          >
-            <template #icon>
-              <span class="gradient-icon">
-                <FontAwesomeIcon
-                  :icon="faInstagram"
-                  class="icon"
-                  fade
-                  style="--fa-animation-duration: 2s; --fa-fade-opacity: 0.6"
-                /> </span></template
           ></ButtonComponent>
           <ButtonComponent
             href="https://www.linkedin.com/in/dawid-kula-97256623b/"
             only-icon
             ripple
             blank
-            class="linkedIn"
+            class="github"
+            tooltip
+            text-tooltip="Mój Github"
           >
             <template #icon>
               <FontAwesomeIcon
-                :icon="faLinkedin"
+                :icon="faGithub"
                 fade
                 style="--fa-animation-duration: 2s; --fa-fade-opacity: 0.6"
               /> </template
@@ -96,12 +70,7 @@
 <script setup>
 import ButtonComponent from "@/components/ButtonComponent.vue";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import {
-  faFacebookF,
-  faInstagram,
-  faLinkedin,
-  faXTwitter,
-} from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import { PersonInformation } from "@/enums/PersonInformation";
 import AnimatedText from "@/components/ui/AnimatedText.vue";
@@ -171,7 +140,12 @@ const downloadFile = async () => {
 
       .social-container {
         display: flex;
-        gap: 10px;
+        gap: 18px;
+
+        svg {
+          width: 36px;
+          height: 36px;
+        }
 
         .facebook {
           color: #3c6ae3;
@@ -180,7 +154,7 @@ const downloadFile = async () => {
         .twitter {
           color: #e7e9ea;
 
-          :hover {
+          &:hover {
             color: #000000;
           }
         }
@@ -191,6 +165,18 @@ const downloadFile = async () => {
 
         .linkedIn {
           color: #1c4376;
+          width: 55px;
+          height: 55px;
+        }
+
+        .github {
+          color: #e7e9ea;
+          width: 55px;
+          height: 55px;
+
+          &:hover {
+            color: #000000;
+          }
         }
       }
     }

@@ -5,7 +5,7 @@ export const SkillsPercentData = [
     skillColor: "#40b580",
   },
   {
-    skillName: "JavaSCript",
+    skillName: "JavaScript",
     skillPercent: 65,
     skillColor: "#edd61d",
   },

@@ -1,24 +1,33 @@
 <template>
-  <div class="portfolio-card-container">
-    <div class="portfolio-content">
-      <div class="portfolio-img">
-        <img
-          :src="imgLink"
-          alt="Logo"
-        />
-        <div class="hover-img"></div>
-      </div>
-      <div class="portfolio-subtitle">
-        <div class="text-sm">{{ subtitle }}</div>
-      </div>
-      <div class="portfolio-title">
-        <div class="text-md">{{ title }}</div>
+  <ScrollAnimation
+    animation-type="slide-bottom"
+    class="scroll-animation"
+    :duration="500"
+    :delay="100"
+  >
+    <div class="portfolio-card-container">
+      <div class="portfolio-content">
+        <div class="portfolio-img">
+          <img
+            :src="imgLink"
+            alt="Logo"
+          />
+          <div class="hover-img"></div>
+        </div>
+        <div class="portfolio-subtitle">
+          <div class="text-sm">{{ subtitle }}</div>
+        </div>
+        <div class="portfolio-title">
+          <div class="text-md">{{ title }}</div>
+        </div>
       </div>
     </div>
-  </div>
+  </ScrollAnimation>
 </template>
 
 <script setup>
+import ScrollAnimation from "@/components/ScrollAnimation.vue";
+
 defineProps({
   imgLink: {
     type: String,
@@ -33,10 +42,16 @@ defineProps({
 </script>
 
 <style scoped lang="scss">
+.scroll-animation {
+  display: flex;
+  max-width: calc(33.33% - 20px);
+  box-shadow: var(--shadow-2);
+  flex: 1 1 calc(33.33% - var(--gap-m));
+}
+
 .portfolio-card-container {
   display: flex;
   flex: 1 1 calc(33.33% - var(--gap-m));
-  max-width: calc(33.33% - 20px);
   max-height: 100%;
   box-shadow: var(--shadow-2);
 
