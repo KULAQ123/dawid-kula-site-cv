@@ -11,15 +11,29 @@
         />
       </div>
       <div class="article-description">
-        <h2 class="heading-lg">{{ project.title }}</h2>
-        <p>{{ project.mainDescription.part1 }}</p>
-        <p>{{ project.mainDescription.part2 }}</p>
+        <div class="article-title">
+          <h2 class="heading-lg">{{ project.title }}</h2>
+        </div>
+        <p
+          v-for="(paragraph, index) in project.mainDescription"
+          :key="index"
+        >
+          {{ paragraph }}
+        </p>
       </div>
       <div class="gallery">
         <SwiperComponent
           :images="project.gallery"
           @open="openGalleryModal"
         />
+      </div>
+      <div class="article-description">
+        <p
+          v-for="(paragraph, index) in project.afterGalleryDescription"
+          :key="'after-' + index"
+        >
+          {{ paragraph }}
+        </p>
       </div>
     </div>
   </ModalComponent>
@@ -28,6 +42,7 @@
 <script setup>
 import SwiperComponent from "@/components/ui/SwiperComponent.vue";
 import ModalComponent from "@/components/ModalComponent.vue";
+import { onMounted, onUnmounted } from "vue";
 
 defineProps({
   isOpen: Boolean,
@@ -36,47 +51,19 @@ defineProps({
 
 const emit = defineEmits(["close"]);
 const closeModal = () => emit("close");
+
+onMounted(() => {
+  document.documentElement.style.overflow = "hidden";
+});
+
+onUnmounted(() => {
+  document.documentElement.style.overflow = "";
+});
 </script>
 
 <style scoped lang="scss">
 .modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-
   .modal-content {
-    background-color: white;
-    width: 95%;
-    max-width: 1080px;
-    max-height: 90dvh; /* Maksymalna wysokość modala */
-    border-radius: 8px;
-    overflow: hidden; /* Ukryj nadmiar zawartości */
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-
-    .modal-header {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-
-      .close-button {
-        background: none;
-        border: none;
-        cursor: pointer;
-        font-size: 2rem;
-        opacity: 0.5;
-        padding-right: 20px;
-      }
-    }
-
     .article-container {
       display: flex;
       width: 100%;
@@ -103,6 +90,11 @@ const closeModal = () => emit("close");
         flex-direction: column;
         gap: 20px;
 
+        .article-title {
+          margin-top: 24px;
+          margin-bottom: 24px;
+        }
+
         p {
           font-family: "Lora", serif;
         }
@@ -110,8 +102,30 @@ const closeModal = () => emit("close");
 
       .gallery {
         display: flex;
-        width: 100%;
+        width: 60dvw;
         margin: auto;
+        user-select: none;
+      }
+    }
+  }
+}
+
+@include medium-max {
+}
+
+@include small-max {
+  .modal-overlay {
+    .modal-content {
+      .article-container {
+        .img-container {
+          height: 180px;
+        }
+        .article-description {
+          padding: 30px 20px;
+        }
+        .gallery {
+          width: 80dvw;
+        }
       }
     }
   }

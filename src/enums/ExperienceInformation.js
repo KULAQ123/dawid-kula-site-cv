@@ -1,37 +1,109 @@
-export const ExperienceData = [
-  {
-    cardIcon: "faCode",
-    cardTitle: "Tworzeniem stron internetowych",
-    cardDescription:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod tincidunt volutpat.",
-    blue: true,
+export const ExperienceData = {
+  Experience_1: {
+    title: "Edukacja",
+    icon: "faGraduationCap",
+    color: "blue",
+    ExperienceContent: [
+      {
+        years: "2016-2019",
+        title: "Technik Architektury Krajobrazu",
+        description: "Zespół Szkół Ogólnokształcących w Oleśnie",
+        color: "blue",
+      },
+      {
+        years: "2019-2023",
+        title: "Studia informatyczne",
+        description: "Politechnika Opolska",
+        color: "red",
+      },
+    ],
   },
-  {
-    cardIcon: "faSwatchbook",
-    cardTitle: "Rozwojem aplikacji",
-    cardDescription:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod tincidunt volutpat.",
-    yellow: true,
+
+  Experience_2: {
+    title: "Doświadczenie",
+    icon: "faSuitcase",
+    color: "red",
+    ExperienceContent: [
+      {
+        years: "Wrzesień 2022",
+        title: "Praktyka Tester/Frontend",
+        description: "Digital Holding Sp. z o.o.",
+        color: "blue",
+      },
+      {
+        years: "Kwiecień 2023 - Grudzień 2023",
+        title: "Staż Frontend - Vue",
+        description: "Digital Holding Sp. z o.o.",
+        color: "red",
+      },
+      {
+        years: "Styczeń 2024 - Czerwiec 2024",
+        title: "Junior Frontend Developer",
+        description: "Digital Holding Sp. z o.o.",
+        color: "violet",
+      },
+      {
+        years: "Luty 2025",
+        title: "Wordpress Developer, Grafik",
+        description: "TOMSKÓR",
+        color: "blue",
+      },
+      {
+        years: "Czerwiec 2025 - Obecnie",
+        title: "Freelance Frontend Developer",
+        description: "Własna działalność",
+        color: "red",
+      },
+    ],
   },
-  {
-    cardIcon: "faGears",
-    cardTitle: "Testowaniem aplikacji",
-    cardDescription:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod tincidunt volutpat.",
-    violet: true,
+
+  Experience_3: {
+    title: "Kursy",
+    icon: "faAward",
+    color: "green",
+    ExperienceContent: [
+      {
+        years: "Lipiec 2022",
+        title: "Kurs Bootstrap 4 - od podstaw",
+        description: "Strefa kursów",
+        color: "blue",
+      },
+      {
+        years: "Luty 2023",
+        title: "Fundamenty programowania",
+        description: "Strefa kursów",
+        color: "red",
+      },
+      {
+        years: "Marzec 2023",
+        title: "Ekosystem JavaScript - wprowadzenie",
+        description: "Strefa kursów",
+        color: "violet",
+      },
+      {
+        years: "Sierpień 2023",
+        title: "Vue.js - od podstaw",
+        description: "Strefa kursów",
+        color: "blue",
+      },
+      {
+        years: "Sierpień 2023",
+        title: "Vue.js - zaawansowany",
+        description: "Strefa kursów",
+        color: "red",
+      },
+      {
+        years: "Wrzesień 2024",
+        title: "Podstawy marketingu internetowego",
+        description: "Google",
+        color: "violet",
+      },
+      {
+        years: "Sierpień 2025",
+        title: "Mid-Level Vue.js Developer Training",
+        description: "Certificates.dev",
+        color: "blue",
+      },
+    ],
   },
-  {
-    cardIcon: "faFile",
-    cardTitle: "Tworzeniem dokumentacji",
-    cardDescription:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod tincidunt volutpat.",
-    red: true,
-  },
-  {
-    cardIcon: "faBook",
-    cardTitle: "Tworzeniem instrukcji obsługi oprogramowań",
-    cardDescription:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod tincidunt volutpat.",
-    green: true,
-  },
-];
+};

@@ -25,13 +25,13 @@ export const SkillsPercentData = [
     skillColor: "#b031c4",
   },
   {
-    skillName: "Node.js",
-    skillPercent: 65,
+    skillName: "WordPress",
+    skillPercent: 90,
     skillColor: "#c43184",
   },
   {
     skillName: "Cypress/Selenium",
-    skillPercent: 65,
+    skillPercent: 60,
     skillColor: "#a4c431",
   },
   {
@@ -63,5 +63,20 @@ export const SkillsPercentData = [
     skillName: "Marketing internetowy",
     skillPercent: 70,
     skillColor: "#c49131",
+  },
+  {
+    skillName: "Photoshop",
+    skillPercent: 60,
+    skillColor: "#5b7837",
+  },
+  {
+    skillName: "AI Tools (ChatGPT, Copilot)",
+    skillPercent: 75,
+    skillColor: "#786337",
+  },
+  {
+    skillName: "AI Content Creation / Automation",
+    skillPercent: 45,
+    skillColor: "#0c3854",
   },
 ];

@@ -52,7 +52,7 @@
           white-text
           radius
           ripple
-          :text="$t('home.downloadCV')"
+          text="Pobierz CV"
           @click="downloadFile"
         >
           <template #icon>

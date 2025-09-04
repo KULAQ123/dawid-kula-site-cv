@@ -2,7 +2,10 @@
   <section>
     <div class="content">
       <div class="card-section">
-        <div class="section-title">
+        <div
+          v-if="cardTitle"
+          class="section-title"
+        >
           <ScrollAnimation
             animation-type="slide-left"
             :duration="500"
@@ -80,7 +83,7 @@ section {
   section {
     .content {
       .card-section {
-        padding: 40px 40px;
+        padding: 32px 20px;
         gap: var(--gap-s);
 
         .section-title {

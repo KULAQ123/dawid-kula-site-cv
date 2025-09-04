@@ -14,7 +14,27 @@
       :location="locationTooltip"
       >{{ textTooltip }}</v-tooltip
     >
+    <v-badge
+      v-if="badge"
+      bordered
+      floating
+      location="top right"
+      color="primary"
+      :offset-x="-10"
+      class="content-container"
+      :class="{ 'white-text': whiteText }"
+      content="6"
+    >
+      <slot name="icon"></slot>
+      <div
+        v-if="!onlyIcon"
+        class="text"
+      >
+        {{ text }}
+      </div>
+    </v-badge>
     <div
+      v-else
       class="content-container"
       :class="{ 'white-text': whiteText }"
     >
@@ -68,6 +88,10 @@ defineProps({
     default: true,
   },
   tooltip: {
+    type: Boolean,
+    default: false,
+  },
+  badge: {
     type: Boolean,
     default: false,
   },

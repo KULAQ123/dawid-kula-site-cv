@@ -20,15 +20,15 @@
     >
       <nav ref="navElement">
         <ButtonComponent
-          :to="localizedPath('#start')"
-          :text="$t('nav.home')"
+          to="/#start"
+          text="Poznaj mnie"
           @click="closeMenu"
         >
           <template #icon> <FontAwesomeIcon :icon="faUser" /></template>
         </ButtonComponent>
         <ButtonComponent
-          :to="localizedPath('#education')"
-          :text="$t('nav.education')"
+          to="/#education"
+          text="Wykształcenie"
           @click="closeMenu"
         >
           <template #icon
@@ -37,14 +37,15 @@
         </ButtonComponent>
         <ButtonComponent
           to="/#skills"
-          :text="$t('nav.skills')"
+          text="Umiejętności"
           @click="closeMenu"
         >
           <template #icon><FontAwesomeIcon :icon="faBarsProgress" /> </template>
         </ButtonComponent>
         <ButtonComponent
           to="/examples"
-          :text="$t('nav.examples')"
+          text="Portfolio"
+          badge
           @click="closeMenu"
         >
           <template #icon><FontAwesomeIcon :icon="faLaptopCode" /> </template>
@@ -64,17 +65,11 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { onBeforeUnmount, onMounted, ref } from "vue";
-import { useI18n } from "vue-i18n";
 
 const navOpen = ref(false);
 const navHeight = ref("");
 const windowWidth = ref(window.innerWidth);
 const navElement = ref(null);
-const { locale } = useI18n();
-
-const localizedPath = (hash) => {
-  return `/${locale.value}/${hash}`;
-};
 
 const toggleMenu = () => {
   navOpen.value = !navOpen.value;

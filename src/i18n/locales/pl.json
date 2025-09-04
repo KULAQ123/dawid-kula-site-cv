@@ -12,9 +12,7 @@
     "examples": "Portfolio"
   },
   "home": {
-    "downloadCV": "Pobierz CV",
-    "aboutMe": "O mnie",
-    "education": "Wykształcenie"
+    "downloadCV": "Pobierz CV"
   },
   "contact": {
     "contactDetails": "Dane kontaktowe",

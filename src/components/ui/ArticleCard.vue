@@ -1,25 +1,23 @@
 <template>
   <ScrollAnimation
-    animation-type="slide-bottom"
-    class="scroll-animation"
+    animation-type="scale"
+    class="portfolio-card-container"
     :duration="500"
     :delay="100"
   >
-    <div class="portfolio-card-container">
-      <div class="portfolio-content">
-        <div class="portfolio-img">
-          <img
-            :src="imgLink"
-            alt="Logo"
-          />
-          <div class="hover-img"></div>
-        </div>
-        <div class="portfolio-subtitle">
-          <div class="text-sm">{{ subtitle }}</div>
-        </div>
-        <div class="portfolio-title">
-          <div class="text-md">{{ title }}</div>
-        </div>
+    <div class="portfolio-content">
+      <div class="portfolio-img">
+        <img
+          :src="imgLink"
+          alt="Logo"
+        />
+        <div class="hover-img"></div>
+      </div>
+      <div class="portfolio-subtitle">
+        <div class="text-sm">{{ subtitle }}</div>
+      </div>
+      <div class="portfolio-title">
+        <div class="text-md">{{ title }}</div>
       </div>
     </div>
   </ScrollAnimation>
@@ -42,17 +40,9 @@ defineProps({
 </script>
 
 <style scoped lang="scss">
-.scroll-animation {
-  display: flex;
-  max-width: calc(33.33% - 20px);
-  box-shadow: var(--shadow-2);
-  flex: 1 1 calc(33.33% - var(--gap-m));
-}
-
 .portfolio-card-container {
   display: flex;
   flex: 1 1 calc(33.33% - var(--gap-m));
-  max-height: 100%;
   box-shadow: var(--shadow-2);
 
   &:hover {
@@ -113,7 +103,7 @@ defineProps({
 }
 
 @include medium-max {
-  .item-container {
+  .portfolio-card-container {
     flex: 1 1 calc(50% - var(--gap-m)); /* 50% szerokości */
     max-width: calc(50% - 20px);
 
@@ -123,7 +113,7 @@ defineProps({
 }
 
 @include small-max {
-  .item-container {
+  .portfolio-card-container {
     flex: 1 1 100%;
     max-width: 100%;
 

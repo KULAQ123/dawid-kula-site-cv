@@ -4,7 +4,7 @@
       animation-type="scale"
       :duration="500"
       :delay="100"
-      class="scroll-animation-image"
+      class="image-container"
     >
       <div class="image-information">
         <img
@@ -146,7 +146,7 @@ import ScrollAnimation from "@/components/ScrollAnimation.vue";
     width: 100%;
   }
 
-  .scroll-animation-image {
+  .image-container {
     width: 25%;
   }
 
@@ -198,11 +198,15 @@ import ScrollAnimation from "@/components/ScrollAnimation.vue";
   .information-container {
     flex-direction: column;
 
-    .image-information {
+    .image-container {
+      display: flex;
       width: 100%;
-      max-width: 400px;
-      margin: auto;
-      max-height: 100%;
+
+      .image-information {
+        width: unset;
+        height: 140px;
+        margin: auto;
+      }
     }
 
     .description-container {
