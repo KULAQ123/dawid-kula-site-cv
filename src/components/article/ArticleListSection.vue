@@ -42,6 +42,8 @@ const closeModal = () => {
 <style scoped lang="scss">
 .portfolio-collection {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   gap: var(--gap-m);
 }
 </style>
