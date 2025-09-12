@@ -4,7 +4,7 @@
       <div class="content-container">
         <div class="logo-container"></div>
         <div class="information-container">
-          <p>email: dawid3104@onet.pl</p>
+          <p>email: kontakt@dawidkula.pl</p>
           <p>tel: 782503000</p>
         </div>
         <div class="social-media">

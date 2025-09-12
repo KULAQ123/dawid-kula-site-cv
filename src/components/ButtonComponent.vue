@@ -118,6 +118,7 @@ defineProps({
       line-height: 1.3;
       white-space: nowrap;
       padding-left: var(--gap-xxm);
+      align-content: center;
     }
 
     &.white-text {

@@ -48,8 +48,8 @@ const closeModal = () => emit("close");
   .modal-content {
     display: flex;
     flex-direction: column;
-    max-width: 90dvw;
-    max-height: 90dvh;
+    width: 85dvw;
+    height: 90dvh;
     border-radius: 8px;
     overflow: hidden;
     background: white;

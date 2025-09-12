@@ -68,8 +68,9 @@ onUnmounted(() => {
       display: flex;
       width: 100%;
       flex-direction: column;
-      overflow-y: auto;
+      //overflow-y: auto;
       flex: 1;
+      padding: 40px 60px 40px 60px;
 
       .img-container {
         display: flex;
@@ -78,17 +79,23 @@ onUnmounted(() => {
         margin-top: 0;
 
         img {
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+          width: 100%;
+          height: 100%;
           object-fit: cover;
+          object-position: 50% 50%;
+          display: block;
         }
       }
 
       .article-description {
         margin-left: auto;
         margin-right: auto;
-        padding: 40px 60px 40px 60px;
         display: flex;
         flex-direction: column;
         gap: 20px;
+        padding-top: 40px;
 
         .article-title {
           margin-top: 24px;
@@ -105,6 +112,7 @@ onUnmounted(() => {
         width: 60dvw;
         margin: auto;
         user-select: none;
+        padding-top: 40px;
       }
     }
   }
