@@ -71,9 +71,9 @@
             </template>
           </InformationCard>
           <InformationCard
-            href="mailto:dawid3104@onet.pl"
+            href="mailto:kontakt@dawidkula.pl"
             headline="Email"
-            title="dawid3104@onet.pl"
+            title="kontakt@dawidkula.pl"
           >
             <template #button>
               <ButtonComponent only-icon>

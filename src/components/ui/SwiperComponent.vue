@@ -46,7 +46,7 @@ defineProps({
 <style scoped lang="scss">
 .my-swiper {
   width: 100%;
-  height: 400px;
+  height: 600px;
 
   .swiper-image {
     width: 100%;
