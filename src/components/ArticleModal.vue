@@ -109,7 +109,7 @@ onUnmounted(() => {
 
       .gallery {
         display: flex;
-        width: 60dvw;
+        width: 70dvw;
         margin: auto;
         user-select: none;
         padding-top: 40px;
@@ -125,6 +125,8 @@ onUnmounted(() => {
   .modal-overlay {
     .modal-content {
       .article-container {
+        padding: 30px 20px;
+
         .img-container {
           height: 180px;
         }
@@ -132,7 +134,7 @@ onUnmounted(() => {
           padding: 30px 20px;
         }
         .gallery {
-          width: 80dvw;
+          width: 100%;
         }
       }
     }
