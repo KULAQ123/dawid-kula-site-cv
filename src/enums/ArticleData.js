@@ -1,13 +1,17 @@
 const ArticlesEnum = Object.freeze({
   PROJECT_1: {
-    title: "Strona własna CV",
+    title: "Moje CV online – interaktywna wizytówka",
     subtitle: "Vue.js, Vuetify, JS",
     image: "src/assets/images/portfolio/strona-cv/main.jpg",
     mainDescription: {
       part1:
-        "W ramach projektu dodano zaawansowane narzędzia SEO oraz integrację z mediami społecznościowymi.",
+        "Moja strona osobista to interaktywne CV i portfolio, które prezentuje moje doświadczenie zawodowe, wykształcenie oraz projekty frontendowe. Zbudowałem ją w Vue.js 3 z wykorzystaniem Composition API, Pinia, Vite i vue-router, a w wybranych miejscach także Vuetify dla szybszego wdrażania gotowych komponentów.",
       part2:
-        "Współpraca z klientami umożliwiła dostosowanie platformy zarówno pod względem funkcjonalności, jak i estetyki.",
+        "Strona jest w pełni responsywna, szybka i zoptymalizowana pod kątem wydajności, a jej projekt graficzny został zaprojektowany w oparciu o nowoczesne trendy UI/UX, inspirowane m.in. koncepcjami z Dribbble i uzupełnione własnymi grafikami stworzonymi w Canvie.",
+      part3:
+        "Dodałem autorskie animacje wejścia elementów podczas przewijania, a także linki do mediów społecznościowych i przycisk pobrania CV. W planach mam dalszy rozwój projektu – wdrożenie formularza kontaktowego oraz integrację z CMS-em (prawdopodobnie Strapi), co umożliwi dynamiczne zarządzanie treściami.",
+      part4:
+        "Dzięki temu projektowi pogłębiłem znajomość Vue 3, pracy z animacjami oraz integracji bibliotek w jednym ekosystemie, tworząc praktyczną i nowoczesną wizytówkę online.",
     },
     gallery: [
       "src/assets/images/portfolio/strona-cv/start.jpg",
@@ -18,40 +22,36 @@ const ArticlesEnum = Object.freeze({
   },
 
   PROJECT_2: {
-    title: "Strona internetowa Zielony Zakątek",
+    title: "Strona internetowa „Zielony Zakątek”",
     subtitle: "HTML, CSS, Bootstrap",
     image: "src/assets/images/portfolio/zielony-zakatek/main.jpg",
-    mainDescription: [
-      "Projekt strony internetowej został stworzony w ramach kursu z podstaw programowania. Strona charakteryzuje się prostym i eleganckim designem, w którym dominują zielone akcenty, nawiązujące do tematyki ogrodnictwa. Strona główna zawiera czytelne menu nawigacyjne, z podstawowymi zakładkami: Start, Cennik, Nasze rośliny oraz Kontakt.\n" +
-        "\n" +
-        'Dodatkowo, strona posiada sekcję "Najnowsze realizacje", w której przedstawiono nie tylko ofertę ogrodniczą, ale także usługi związane z projektowaniem roślin w przestrzeniach biurowych, ogrodach oraz pokojach domowych.',
-      "W stopce strony znajdują się najczęściej zadawane pytania oraz dane kontaktowe właściciela firmy, wraz z informacjami o dojeździe.\n" +
-        "\n" +
-        "Do stworzenia strony wykorzystano języki HTML, CSS oraz framework Bootstrap, co pozwoliło na automatyczne dostosowanie strony do urządzeń mobilnych.\n" +
-        "\n" +
-        "Chętnie podejmę się realizacji podobnych projektów dla innych zainteresowanych klientów.",
-    ],
+    mainDescription: {
+      part1:
+        "Projekt strony „Zielony Zakątek” powstał w ramach kursu podstaw programowania i pełni funkcję strony firmowej dla ogrodnictwa. Strona zawiera menu nawigacyjne prowadzące do sekcji: Start, Cennik, Nasze rośliny oraz Kontakt. Dodatkowo wprowadzono sekcję „Najnowsze realizacje”, prezentującą nie tylko ofertę roślinną, ale także usługi związane z projektowaniem zieleni w przestrzeniach biurowych, ogrodach i wnętrzach domowych.",
+      part2:
+        "W stopce umieszczono najważniejsze informacje i dane kontaktowe, a całość została zaprojektowana z wykorzystaniem HTML, CSS oraz frameworka Bootstrap, który zapewnia stronie responsywność i estetyczny układ.",
+      part3:
+        "Był to jeden z moich pierwszych projektów podczas studiów, który pozwolił mi zdobyć praktyczne doświadczenie w tworzeniu prostych, ale funkcjonalnych stron internetowych.",
+    },
     gallery: [
       "src/assets/images/portfolio/zielony-zakatek/start.jpg",
       "src/assets/images/portfolio/zielony-zakatek/content.jpg",
       "src/assets/images/portfolio/zielony-zakatek/description.jpg",
       "src/assets/images/portfolio/zielony-zakatek/footer.jpg",
     ],
-    afterGalleryDescription: [
-      "A to opis, który pojawi się już po galerii.",
-      "Możesz tu dać dodatkowe szczegóły, podsumowanie itd.",
-    ],
   },
 
   PROJECT_3: {
-    title: "Strona dla Architekta Wnętrz",
+    title: "Strona biznesowa dla Architekta Wnętrz",
     subtitle: "HTML, CSS, Bootstrap",
     image: "src/assets/images/portfolio/strona-architekta/main.jpg",
     mainDescription: {
       part1:
-        "Platforma została zaprojektowana od podstaw, uwzględniając skalowalność i wydajność.",
+        "Projekt strony dla architekta wnętrz powstał w ramach bardziej zaawansowanego kursu programowania. Strona została zaprojektowana jako wizytówka biznesu oferującego usługi projektowania wnętrz, z dodatkową sekcją sklepu internetowego z akcesoriami, blogiem tematycznym oraz prezentacją realizacji projektowych.",
       part2:
-        "Kluczowe funkcje obejmują wyszukiwarkę produktów, integrację płatności i narzędzia do zarządzania zamówieniami.",
+        "W ramach projektu przygotowałem i zakodowałem widoki dla kluczowych podstron: strony głównej, realizacji, usług, bloga oraz sklepu. Skupiłem się głównie na designie i warstwie frontendowej, wykorzystując HTML, CSS oraz framework Bootstrap do zapewnienia responsywności i spójnego układu strony.",
+      part3:
+        "Ten projekt pozwolił mi zdobyć praktykę w organizacji kodu, poznawaniu dobrych praktyk czystego programowania oraz w pracy nad większym, wielosekcyjnym projektem.",
     },
     gallery: [
       "src/assets/images/portfolio/strona-architekta/start.jpg",

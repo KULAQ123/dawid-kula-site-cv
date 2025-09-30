@@ -46,13 +46,29 @@ defineProps({
 <style scoped lang="scss">
 .my-swiper {
   width: 100%;
-  height: 600px;
+  max-height: 600px;
+
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+  }
 
   .swiper-image {
     width: 100%;
-    height: 100%;
     object-fit: cover;
     border-radius: 8px;
+  }
+}
+
+@include medium-max {
+}
+
+@include small-max {
+  .my-swiper {
+    height: unset;
+
+    .swiper-image {
+    }
   }
 }
 </style>
