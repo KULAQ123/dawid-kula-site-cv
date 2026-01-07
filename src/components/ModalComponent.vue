@@ -48,8 +48,8 @@ const closeModal = () => emit("close");
   .modal-content {
     display: flex;
     flex-direction: column;
-    width: 85dvw;
-    height: 90dvh;
+    width: 80dvw;
+    height: 85dvh;
     border-radius: 8px;
     overflow: hidden;
     background: white;
@@ -81,6 +81,9 @@ const closeModal = () => emit("close");
 @include small-max {
   .modal-overlay {
     .modal-content {
+      width: 100dvh;
+      height: 90dvh;
+
       .modal-header {
         .close-button {
           font-size: 1.5rem;

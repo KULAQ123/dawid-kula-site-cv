@@ -58,7 +58,7 @@ const icons = {
     h2 {
       margin-top: 0;
       margin-bottom: 0;
-      font-size: 36px;
+      font-size: 32px;
       font-weight: 500;
       line-height: 1.2em;
     }

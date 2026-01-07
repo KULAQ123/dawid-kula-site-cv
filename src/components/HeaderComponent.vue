@@ -2,9 +2,9 @@
   <header :class="{ active: isMenuOpen, 'sticky-header': isSticky }">
     <div class="content">
       <div class="logo-container">
-        <RouterLink :to="Tr.i18nRoute({ name: 'home' })">
+        <RouterLink :to="{ name: 'home' }">
           <img
-            src="@/assets/images/Logo.png"
+            src="/images/Logo.png"
             height="158"
             alt="Logo"
           />
@@ -16,7 +16,6 @@
 </template>
 
 <script setup>
-import Tr from "@/i18n/translation";
 import { onBeforeUnmount, onMounted, ref } from "vue";
 import NavbarComponent from "@/components/NavbarComponent.vue";
 

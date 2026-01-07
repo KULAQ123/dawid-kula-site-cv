@@ -88,7 +88,7 @@ defineProps({
   .item-text {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: var(--gap-m);
 
     .item-description {
       display: flex;
@@ -173,6 +173,12 @@ defineProps({
 
     .card-container {
       flex-direction: column;
+    }
+
+    .icon {
+      width: 35px;
+      height: 35px;
+      margin-right: 10px;
     }
   }
 }
