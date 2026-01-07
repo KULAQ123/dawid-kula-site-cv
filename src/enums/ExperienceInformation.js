@@ -12,7 +12,7 @@ export const ExperienceData = {
       },
       {
         years: "2019-2023",
-        title: "Studia informatyczne",
+        title: "Studia informatyczne (Inżynier)",
         description: "Politechnika Opolska",
         color: "red",
       },
@@ -49,10 +49,16 @@ export const ExperienceData = {
         color: "blue",
       },
       {
-        years: "Czerwiec 2025 - Obecnie",
+        years: "Czerwiec 2025 - Październik 2025",
         title: "Freelance Frontend Developer",
         description: "Własna działalność",
         color: "red",
+      },
+      {
+        years: "Październik 2025 - Obecnie",
+        title: "Frontend Developer",
+        description: "Digital Holding Sp. z o.o.",
+        color: "violet",
       },
     ],
   },

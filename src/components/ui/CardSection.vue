@@ -46,8 +46,6 @@ section {
       display: flex;
       flex-direction: column;
       border-radius: 20px;
-      //margin-top: 100px;
-      //background: var(--white);
       background: rgb(255, 255, 255);
       background: radial-gradient(
         circle,
@@ -87,6 +85,9 @@ section {
         gap: var(--gap-s);
 
         .section-title {
+          flex-wrap: wrap;
+          gap: var(--gap-xxm);
+
           .line-gradient {
             width: 100px;
           }

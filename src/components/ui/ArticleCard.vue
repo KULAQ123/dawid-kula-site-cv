@@ -93,7 +93,7 @@ defineProps({
 
     .portfolio-subtitle {
       margin-top: 20px;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
       color: var(--color-7);
     }
 
@@ -119,6 +119,20 @@ defineProps({
 
     .card-container {
       flex-direction: column;
+    }
+
+    .portfolio-content {
+      .portfolio-img {
+        height: auto;
+      }
+
+      .portfolio-subtitle {
+        text-align: center;
+      }
+
+      .portfolio-title {
+        text-align: center;
+      }
     }
   }
 }

@@ -4,7 +4,7 @@
       <div class="banner-container">
         <div class="personal-container">
           <img
-            src="/src/assets/images/profilImage.jpg"
+            src="/images/profilImage.jpg"
             alt="Person Image"
           />
         </div>
@@ -32,7 +32,7 @@
               /> </template
           ></ButtonComponent>
           <ButtonComponent
-            href="https://www.linkedin.com/in/dawid-kula-97256623b/"
+            href="https://github.com/KULAQ123"
             only-icon
             ripple
             blank
@@ -77,7 +77,7 @@ import AnimatedText from "@/components/ui/AnimatedText.vue";
 
 const downloadFile = async () => {
   try {
-    const filePath = "src/assets/documents/cv.pdf";
+    const filePath = "/documents/cv.pdf";
     const response = await fetch(filePath);
     const blob = await response.blob();
     const url = window.URL.createObjectURL(new Blob([blob]));

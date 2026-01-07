@@ -8,7 +8,7 @@
     >
       <div class="image-information">
         <img
-          src="/src/assets/images/profilImage.jpg"
+          src="/images/profilImage.jpg"
           alt="Profil Image"
         />
       </div>
@@ -129,7 +129,7 @@ import ScrollAnimation from "@/components/ScrollAnimation.vue";
   gap: var(--gap-m);
 
   .image-information {
-    max-height: 330px;
+    max-height: 410px;
     border-radius: 20px;
     overflow: hidden;
     width: 100%;
@@ -154,7 +154,7 @@ import ScrollAnimation from "@/components/ScrollAnimation.vue";
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: var(--gap-m);
+    gap: var(--gap-l);
 
     h2 {
       font-size: 26px;
@@ -204,7 +204,6 @@ import ScrollAnimation from "@/components/ScrollAnimation.vue";
 
       .image-information {
         width: unset;
-        height: 140px;
         margin: auto;
       }
     }

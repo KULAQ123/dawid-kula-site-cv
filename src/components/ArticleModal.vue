@@ -22,10 +22,7 @@
         </p>
       </div>
       <div class="gallery">
-        <SwiperComponent
-          :images="project.gallery"
-          @open="openGalleryModal"
-        />
+        <SwiperComponent :images="project.gallery" />
       </div>
       <div class="article-description">
         <p
@@ -109,10 +106,10 @@ onUnmounted(() => {
 
       .gallery {
         display: flex;
-        width: 70dvw;
+        width: 60dvw;
         margin: auto;
         user-select: none;
-        padding-top: 40px;
+        padding-top: 100px;
       }
     }
   }
@@ -130,11 +127,10 @@ onUnmounted(() => {
         .img-container {
           height: 180px;
         }
-        .article-description {
-          padding: 30px 20px;
-        }
+
         .gallery {
           width: 100%;
+          padding-top: 40px;
         }
       }
     }
