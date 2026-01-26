@@ -1,32 +1,32 @@
 <template>
   <ModalComponent
     :is-open="isOpen"
-    @close="closeModal"
+    @close="$emit('update:isOpen', false)"
   >
     <div class="article-container small-scroll">
       <div class="img-container">
         <img
-          :src="project.image"
+          :src="project?.image"
           alt="Project Image"
         />
       </div>
       <div class="article-description">
         <div class="article-title">
-          <h2 class="heading-lg">{{ project.title }}</h2>
+          <h2 class="heading-lg">{{ project?.title }}</h2>
         </div>
         <p
-          v-for="(paragraph, index) in project.mainDescription"
+          v-for="(paragraph, index) in project?.mainDescription"
           :key="index"
         >
           {{ paragraph }}
         </p>
       </div>
       <div class="gallery">
-        <SwiperComponent :images="project.gallery" />
+        <SwiperComponent :images="project?.gallery" />
       </div>
       <div class="article-description">
         <p
-          v-for="(paragraph, index) in project.afterGalleryDescription"
+          v-for="(paragraph, index) in project?.afterGalleryDescription"
           :key="'after-' + index"
         >
           {{ paragraph }}
@@ -39,23 +39,13 @@
 <script setup>
 import SwiperComponent from "@/components/ui/SwiperComponent.vue";
 import ModalComponent from "@/components/ModalComponent.vue";
-import { onMounted, onUnmounted } from "vue";
 
 defineProps({
   isOpen: Boolean,
   project: Object,
 });
 
-const emit = defineEmits(["close"]);
-const closeModal = () => emit("close");
-
-onMounted(() => {
-  document.documentElement.style.overflow = "hidden";
-});
-
-onUnmounted(() => {
-  document.documentElement.style.overflow = "";
-});
+defineEmits(["update:isOpen"]);
 </script>
 
 <style scoped lang="scss">
@@ -65,7 +55,6 @@ onUnmounted(() => {
       display: flex;
       width: 100%;
       flex-direction: column;
-      //overflow-y: auto;
       flex: 1;
       padding: 40px 60px 40px 60px;
 
@@ -106,7 +95,7 @@ onUnmounted(() => {
 
       .gallery {
         display: flex;
-        width: 60dvw;
+        width: 100%;
         margin: auto;
         user-select: none;
         padding-top: 100px;
@@ -122,7 +111,7 @@ onUnmounted(() => {
   .modal-overlay {
     .modal-content {
       .article-container {
-        padding: 30px 20px;
+        padding: 10px 5px;
 
         .img-container {
           height: 180px;

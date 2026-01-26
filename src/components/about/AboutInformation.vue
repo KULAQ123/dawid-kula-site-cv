@@ -21,18 +21,20 @@
       <div class="description-container">
         <h2>Kim jestem?</h2>
         <p>
-          Jestem doświadczonym Frontend Developerem z Polski, posiadającym
-          umiejętności w projektowaniu i implementacji stron internetowych oraz
-          oprogramowania frontendowego. Pracując w branży, zdobyłem praktyczne
-          doświadczenie w tworzeniu responsywnych i użytecznych interfejsów,
-          dostosowanych do potrzeb użytkowników.
+          Jestem Frontend Developerem, który tworzy nie tylko działające, ale i
+          przyjemne w użytkowaniu interfejsy. Specjalizuję się w projektowaniu
+          responsywnych stron i aplikacji, łącząc estetykę z funkcjonalnością.
+          Do mojej pracy podchodzę praktycznie i kreatywnie — potrafię zamienić
+          wymagania projektowe w produkty, które działają sprawnie i są
+          intuicyjne dla użytkowników.
           <br />
           <br />
-          Moja pasja do tworzenia estetycznych i funkcjonalnych rozwiązań
-          pozwala mi efektywnie przekształcać wymagania projektowe w gotowe
-          produkty. Jestem zmotywowany, kreatywny i zawsze dążę do doskonalenia
-          swoich umiejętności w dynamicznie rozwijającym się świecie technologii
-          internetowych.
+          Choć moją główną pasją jest frontend, mam doświadczenie w innych
+          obszarach IT, takich jak testowanie, grafika czy marketing, co pozwala
+          mi lepiej rozumieć cały proces tworzenia projektu. Ukończyłem
+          informatykę ze specjalizacją w programowaniu, więc czuję się pewnie w
+          pracy nad różnorodnymi technologiami. Lubię wyzwania i stale rozwijam
+          swoje umiejętności, by tworzyć nowoczesne, przemyślane rozwiązania.
         </p>
         <h2>Dane kontaktowe</h2>
         <div class="info-container">
@@ -126,7 +128,7 @@ import ScrollAnimation from "@/components/ScrollAnimation.vue";
 <style scoped lang="scss">
 .information-container {
   display: flex;
-  gap: var(--gap-m);
+  gap: var(--gap-xl);
 
   .image-information {
     max-height: 410px;
@@ -158,14 +160,16 @@ import ScrollAnimation from "@/components/ScrollAnimation.vue";
 
     h2 {
       font-size: 26px;
-      font-weight: 500;
+      font-weight: 600;
       line-height: 1.1em;
     }
 
     p {
+      font-family: "Roboto Slab", serif;
       font-size: 16px;
       line-height: 1.5em;
       opacity: 0.8;
+      max-width: 800px;
     }
 
     .info-container {
@@ -209,6 +213,8 @@ import ScrollAnimation from "@/components/ScrollAnimation.vue";
     }
 
     .description-container {
+      gap: var(--gap-m);
+
       .info-container {
         flex-direction: column;
 

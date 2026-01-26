@@ -4,7 +4,7 @@
     class="services-button"
   >
     <RouterLink
-      to="/uslugi"
+      to="/services"
       class="button-link"
       @mouseenter="showTip = true"
       @mouseleave="showTip = false"
@@ -19,7 +19,7 @@
         v-show="showTip"
         class="tooltip"
       >
-        Kliknij i poznaj moje usługi – może właśnie Ciebie zainteresują!
+        Poznaj moje usługi! ✨
       </span>
     </RouterLink>
   </div>
@@ -46,9 +46,9 @@ const showTip = ref(false);
 
   .button-link {
     position: relative;
-    background-color: #2563eb;
+    background-color: var(--brand);
     color: white;
-    padding: 0.75rem 1rem;
+    padding: 20px;
     border-radius: 9999px;
     box-shadow:
       0 10px 15px -3px rgba(0, 0, 0, 0.1),
@@ -85,14 +85,14 @@ const showTip = ref(false);
     background: rgba(37, 99, 235, 0.9);
     color: white;
     padding: 0.5rem 0.75rem;
-    border-radius: 0.375rem;
+    border-radius: 12px 12px 0 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     pointer-events: none;
     opacity: 0;
     transition: opacity 0.3s ease;
     user-select: none;
     z-index: 60;
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .button-link:hover .tooltip,
@@ -102,15 +102,12 @@ const showTip = ref(false);
   }
 }
 
-@keyframes pulse {
-  0%,
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.05);
-    opacity: 0.85;
+@media (max-width: 850px) {
+  .services-button {
+    .button-link {
+      padding: 1rem;
+      font-size: 1.2rem;
+    }
   }
 }
 </style>

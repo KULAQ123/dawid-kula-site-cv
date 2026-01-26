@@ -33,6 +33,11 @@ defineProps({
     align-items: center;
     gap: 10px;
     width: fit-content;
+
+    .text-xl {
+      font-size: 28px;
+      font-weight: 500;
+    }
   }
 }
 </style>

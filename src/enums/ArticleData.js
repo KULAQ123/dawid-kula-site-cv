@@ -110,9 +110,15 @@ const ArticlesEnum = Object.freeze({
     image: "/images/portfolio/ogolne-projekty/brand-logo.jpg",
     mainDescription: {
       part1:
-        "Stworzyłem stronę ślubną weselną w wordpressie wykorzystałem do tego szablony oraz wtyczkę Elementor.",
+        "Moja ścieżka zawodowa to nieustanny rozwój i eksploracja nowych technologii. Zrealizowałem liczne projekty, które pozwoliły mi opanować zaawansowane techniki pracy z kodem i grafiką. W procesie twórczym swobodnie łączę świat programowania z designem, wykorzystując narzędzia takie jak Photoshop, Affinity czy Canva, co pozwala mi na dostarczanie kompletnych i estetycznych rozwiązań.",
       part2:
-        "Strona służy do poinofmrowania gości weselnych o zaślubinach oraz imprezie a także jakich prezentów oczekują Państwo Młodzi.",
+        "Pasjonuję się grafiką 3D i ruchem. W programie Blender tworzę zróżnicowane projekty – od precyzyjnych wizualizacji architektonicznych, przez modelowanie obiektów, aż po zaawansowane animacje typu motion capture. Ta umiejętność pozwala mi na wprowadzanie unikalnych, trójwymiarowych elementów do projektów webowych, co znacząco podnosi ich atrakcyjność.",
+      part3:
+        "Posiadam doświadczenie w pracy z systemami CMS, czego przykładem jest kompleksowa realizacja strony ślubnej w systemie WordPress. Wykorzystując potencjał wtyczki Elementor, stworzyłem funkcjonalny i przejrzysty serwis informacyjny dla gości, dbając o estetykę zgodną z oczekiwaniami użytkowników oraz o intuicyjną nawigację.",
+      part4:
+        "W obszarze jakości oprogramowania skupiam się na automatyzacji. Tworzę zaawansowane skrypty testowe w Cypressie, czego przykładem jest automatyzacja testów panelu administracyjnego. Moje nieszablonowe podejście do kodu zaowocowało również stworzeniem algorytmu rozpoznawczego, który automatycznie identyfikował elementy graficzne z gier na stronach konkursowych.",
+      part5:
+        "Doskonale rozumiem potrzeby biznesowe nowoczesnych stron – zajmuję się nie tylko ich tworzeniem, ale i bieżącym utrzymaniem. Prowadzę administrację treścią oraz aktywnie pracuję nad pozycjonowaniem (SEO), dbając o to, by serwisy były widoczne w sieci i generowały realny ruch.",
     },
     gallery: [
       "/images/portfolio/ogolne-projekty/cv.jpg",

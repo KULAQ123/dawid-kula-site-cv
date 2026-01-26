@@ -31,6 +31,12 @@ const router = createRouter({
       alias: ["/przyklady", "/portfolio", "/strony"],
     },
     {
+      path: "/services",
+      name: "services",
+      component: () => import("../views/ServicesView.vue"),
+      alias: ["/uslugi", "/oferta", "/lista"],
+    },
+    {
       path: "/:pathMatch(.*)*",
       name: "notFound",
       component: () => import("../views/NotFoundView.vue"),
