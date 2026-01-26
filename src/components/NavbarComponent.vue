@@ -125,7 +125,7 @@ onBeforeUnmount(() => {
       gap: 20px;
 
       a {
-        font-size: 1.6rem;
+        font-size: 1rem;
         line-height: 32px;
         font-weight: 500;
         color: var(--white);

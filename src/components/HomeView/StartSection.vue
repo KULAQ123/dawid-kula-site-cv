@@ -135,7 +135,7 @@ const downloadFile = async () => {
         flex-direction: column;
         align-items: center;
         color: var(--color-2);
-        gap: var(--gap-xs);
+        gap: var(--gap-xxm);
       }
 
       .social-container {

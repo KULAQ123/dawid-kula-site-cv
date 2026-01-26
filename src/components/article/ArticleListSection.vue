@@ -6,15 +6,15 @@
       :img-link="project.image"
       :title="project.title"
       :subtitle="project.subtitle"
-      @click="openModal(project)"
+      @click="openModal(project, index)"
     ></ArticleCard>
   </div>
 
   <ArticleModal
-    v-if="isModalOpen"
-    :is-open="isModalOpen"
+    v-if="selectedProject"
+    :key="`article-${selectedProjectId}-${openCounter}`"
+    v-model:is-open="isModalOpen"
     :project="selectedProject"
-    @close="closeModal"
   />
 </template>
 
@@ -27,15 +27,14 @@ import { ref } from "vue";
 const projects = Object.values(ArticlesEnum);
 const isModalOpen = ref(false);
 const selectedProject = ref(null);
+const selectedProjectId = ref(null);
+const openCounter = ref(0);
 
-const openModal = (project) => {
+const openModal = (project, projectId) => {
   selectedProject.value = project;
+  selectedProjectId.value = projectId;
   isModalOpen.value = true;
-};
-
-const closeModal = () => {
-  isModalOpen.value = false;
-  selectedProject.value = null;
+  openCounter.value++;
 };
 </script>
 

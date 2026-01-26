@@ -60,6 +60,9 @@ onMounted(() => {
 
 <style scoped lang="scss">
 .animated-subtitle {
+  font-family: Poppins, sans-serif;
+  opacity: 0.8;
+
   .typed-cursor {
     display: inline-block;
     animation: blink 0.8s step-end infinite;

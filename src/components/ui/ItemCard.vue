@@ -88,12 +88,12 @@ defineProps({
   .item-text {
     display: flex;
     flex-direction: column;
-    gap: var(--gap-m);
+    gap: var(--gap-xxm);
 
     .item-description {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 6px;
 
       p {
         color: var(--color-gray-100);
