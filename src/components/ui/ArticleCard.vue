@@ -5,6 +5,12 @@
     :duration="500"
     :delay="100"
   >
+    <div
+      v-if="forSale"
+      class="ribbon"
+    >
+      <span>Na sprzedaż</span>
+    </div>
     <div class="portfolio-content">
       <div class="portfolio-img">
         <img
@@ -36,13 +42,15 @@ defineProps({
   title: {
     type: String,
   },
+  forSale: { type: Boolean, default: false },
 });
 </script>
 
 <style scoped lang="scss">
 .portfolio-card-container {
   display: flex;
-  flex: 1 1 calc(33.33% - var(--gap-m));
+  flex: 0 1 calc(33.33% - var(--gap-m));
+  max-width: calc(33.33% - var(--gap-m));
   box-shadow: var(--shadow-2);
 
   &:hover {
@@ -53,6 +61,25 @@ defineProps({
         }
       }
     }
+  }
+
+  .ribbon {
+    position: absolute;
+    top: 23px;
+    right: -35px;
+    width: 140px;
+    background-color: #2ecc71;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 5px 0;
+    transform: rotate(45deg);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    pointer-events: none;
+    z-index: 10;
   }
 
   .portfolio-content {

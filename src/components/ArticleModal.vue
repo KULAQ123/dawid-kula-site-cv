@@ -13,6 +13,17 @@
       <div class="article-description">
         <div class="article-title">
           <h2 class="heading-lg">{{ project?.title }}</h2>
+
+          <a
+            v-if="project?.link"
+            :href="project.link"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="visit-button"
+          >
+            Zobacz projekt online
+            <i class="external-icon">↗</i>
+          </a>
         </div>
         <p
           v-for="(paragraph, index) in project?.mainDescription"
@@ -84,8 +95,40 @@ defineEmits(["update:isOpen"]);
         padding-top: 40px;
 
         .article-title {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
           margin-top: 24px;
           margin-bottom: 24px;
+
+          .visit-button {
+            display: inline-flex;
+            align-items: center;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: var(
+              --color-7
+            ); // Użyj koloru akcentowego swojej strony
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition:
+              background-color 0.3s,
+              color 0.3s;
+            width: fit-content;
+
+            &:hover {
+              background-color: var(--color-2); // Kolor po najechaniu
+              color: var(--black);
+            }
+
+            .external-icon {
+              margin-left: 8px;
+              font-style: normal;
+            }
+          }
         }
 
         p {

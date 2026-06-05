@@ -23,7 +23,7 @@
       :offset-x="-10"
       class="content-container"
       :class="{ 'white-text': whiteText }"
-      content="6"
+      content="8"
     >
       <slot name="icon"></slot>
       <div
