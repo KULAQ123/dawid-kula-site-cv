@@ -6,6 +6,7 @@
       :img-link="project.image"
       :title="project.title"
       :subtitle="project.subtitle"
+      :for-sale="project.forSale ?? false"
       @click="openModal(project, index)"
     ></ArticleCard>
   </div>

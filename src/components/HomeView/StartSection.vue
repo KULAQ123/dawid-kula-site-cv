@@ -105,7 +105,7 @@ const downloadFile = async () => {
       display: flex;
       flex-direction: column;
       align-items: center;
-      height: calc(100dvh - 100px);
+      height: calc(100vh - 100px);
       justify-content: center;
       gap: var(--gap-l);
 

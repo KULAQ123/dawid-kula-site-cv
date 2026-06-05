@@ -1,17 +1,17 @@
 export const SkillsPercentData = [
   {
     skillName: "Vue.js/Nuxt 3/Vue 3",
-    skillPercent: 80,
+    skillPercent: 85,
     skillColor: "#40b580",
   },
   {
     skillName: "JavaScript",
-    skillPercent: 65,
+    skillPercent: 70,
     skillColor: "#edd61d",
   },
   {
     skillName: "TypeScript",
-    skillPercent: 45,
+    skillPercent: 55,
     skillColor: "#3177c4",
   },
   {
@@ -21,11 +21,11 @@ export const SkillsPercentData = [
   },
   {
     skillName: "Tester Oprogramowania",
-    skillPercent: 70,
+    skillPercent: 75,
     skillColor: "#b031c4",
   },
   {
-    skillName: "WordPress",
+    skillName: "WordPress/Elementor",
     skillPercent: 90,
     skillColor: "#c43184",
   },
@@ -78,5 +78,15 @@ export const SkillsPercentData = [
     skillName: "AI Content Creation / Automation",
     skillPercent: 45,
     skillColor: "#0c3854",
+  },
+  {
+    skillName: "Shoper",
+    skillPercent: 65,
+    skillColor: "#640707",
+  },
+  {
+    skillName: "UX/UI",
+    skillPercent: 45,
+    skillColor: "#0fecd8",
   },
 ];
