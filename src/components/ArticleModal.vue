@@ -25,6 +25,13 @@
             <i class="external-icon">↗</i>
           </a>
         </div>
+        <div
+          v-if="project.price"
+          class="project-price"
+        >
+          <span class="project-price__label">Cena projektu</span>
+          <span class="project-price__value">{{ project.price }}</span>
+        </div>
         <p
           v-for="(paragraph, index) in project?.mainDescription"
           :key="index"
@@ -99,7 +106,7 @@ defineEmits(["update:isOpen"]);
           flex-direction: column;
           gap: 10px;
           margin-top: 24px;
-          margin-bottom: 24px;
+          margin-bottom: 14px;
 
           .visit-button {
             display: inline-flex;
@@ -128,6 +135,31 @@ defineEmits(["update:isOpen"]);
               margin-left: 8px;
               font-style: normal;
             }
+          }
+        }
+
+        .project-price {
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          margin-top: 8px;
+          margin-bottom: 20px;
+          padding: 8px 16px;
+          background-color: var(--color-3); // dopasuj do swojej palety
+          border-left: 3px solid #2ecc71; // ten sam zielony co wstążka forSale
+          border-radius: 4px;
+
+          &__label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--color-7);
+          }
+
+          &__value {
+            font-size: 18px;
+            font-weight: 700;
+            color: #2ecc71;
           }
         }
 

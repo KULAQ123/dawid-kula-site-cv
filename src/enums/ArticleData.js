@@ -4,6 +4,7 @@ const ArticlesEnum = Object.freeze({
     link: "https://ogrodnictwokulajan.pl",
     subtitle: "Nuxt 4, Vue 3, TypeScript, Strapi CMS",
     image: "/images/portfolio/strona-ogrodnictwa/main.jpg",
+    isLive: true,
     mainDescription: {
       part1:
         "Projekt obejmował stworzenie nowoczesnej i responsywnej strony internetowej dla lokalnego ogrodnictwa. Aplikację zbudowałem w oparciu o Nuxt 4 oraz Vue 3 z wykorzystaniem TypeScript, co pozwoliło na stworzenie wydajnego i skalowalnego rozwiązania z wykorzystaniem SSR.",
@@ -33,6 +34,7 @@ const ArticlesEnum = Object.freeze({
     link: "https://dawidkula.pl",
     subtitle: "Vue.js, Vuetify, JS",
     image: "/images/portfolio/strona-cv/main.jpg",
+    isLive: true,
     mainDescription: {
       part1:
         "Moja strona osobista to interaktywne CV i portfolio, które prezentuje moje doświadczenie zawodowe, wykształcenie oraz projekty frontendowe. Zbudowałem ją w Vue.js 3 z wykorzystaniem Composition API, Pinia, Vite i vue-router, a w wybranych miejscach także Vuetify dla szybszego wdrażania gotowych komponentów.",
@@ -56,6 +58,7 @@ const ArticlesEnum = Object.freeze({
     link: "",
     subtitle: "Shoper, UX/UI, e-commerce, content marketing",
     image: "/images/portfolio/lumea-candles/main.jpg",
+    price: "2299 zł",
     forSale: true,
     mainDescription: {
       part1:
@@ -86,6 +89,49 @@ const ArticlesEnum = Object.freeze({
   },
 
   PROJECT_4: {
+    title: "ETHERA AROMA – sklep internetowy",
+    link: "",
+    subtitle: "Shopify, UX/UI, e-commerce, product design",
+    image: "/images/portfolio/ethera-aroma/mockup.jpg",
+    price: "2299 zł",
+    forSale: true,
+
+    mainDescription: {
+      part1:
+        "Projekt ETHERA AROMA to w pełni zaprojektowany sklep internetowy stworzony na platformie Shopify. Celem projektu było stworzenie premium marki e-commerce z branży aromaterapii, skupionej na naturalnych olejkach eterycznych oraz codziennych rytuałach wellness.",
+
+      part2:
+        "W ramach projektu zaprojektowałem kompletną strukturę sklepu obejmującą stronę główną, system kolekcji (Daily Rituals, Evening Rituals, Complete Ritual Collection), karty produktów oraz pełną architekturę informacji i UX sklepu.",
+
+      part3:
+        "Został stworzony spójny system brandingowy marki ETHERA AROMA, obejmujący nazwę, identyfikację wizualną, styl komunikacji, opisy produktów, system opakowań oraz koncepcję premium produktów w formie 30 ml olejków eterycznych oraz zestawów 5×10 ml.",
+
+      part4:
+        "Projekt pozwolił mi zdobyć doświadczenie w projektowaniu sklepu Shopify, tworzeniu systemu produktów e-commerce, budowaniu brandingu premium oraz projektowaniu UX/UI zorientowanego na sprzedaż i doświadczenie użytkownika.",
+
+      part5:
+        "Projekt ETHERA AROMA jest kompletną koncepcją marki e-commerce gotową do wdrożenia lub odsprzedaży. Obejmuje sklep Shopify, system produktów, branding, treści marketingowe, strukturę UX oraz pełną strategię kolekcji. Cena projektu: 2499 zł.",
+    },
+
+    gallery: [
+      "/images/portfolio/ethera-aroma/desktop-collection.jpg",
+      "/images/portfolio/ethera-aroma/desktop-essential.jpg",
+      "/images/portfolio/ethera-aroma/desktop-koszyk.jpg",
+      "/images/portfolio/ethera-aroma/desktop-product.jpg",
+      "/images/portfolio/ethera-aroma/home.jpg",
+      "/images/portfolio/ethera-aroma/home-page.jpg",
+      "/images/portfolio/ethera-aroma/koszyk.jpg",
+      "/images/portfolio/ethera-aroma/list-product.jpg",
+      "/images/portfolio/ethera-aroma/mobile-collection.jpg",
+      "/images/portfolio/ethera-aroma/mobile-product.jpg",
+      "/images/portfolio/ethera-aroma/mockup.jpg",
+      "/images/portfolio/ethera-aroma/product-card.jpg",
+      "/images/portfolio/ethera-aroma/product-page.jpg",
+      "/images/portfolio/ethera-aroma/product-view.jpg",
+    ],
+  },
+
+  PROJECT_5: {
     title: "Strona inwestycji deweloperskiej",
     subtitle: "Wordpress, JS, SVG",
     image: "/images/portfolio/strona-nieruchomosci/main.jpg",
@@ -113,7 +159,65 @@ const ArticlesEnum = Object.freeze({
     ],
   },
 
-  PROJECT_5: {
+  PROJECT_6: {
+    title: "Aplikacja mobilna (SaaS / Mobile App)",
+    subtitle: "Nuxt, Vue, Capacitor, Next.js, Node.js",
+    image: "/images/portfolio/mockup.jpg",
+    price: "0d 10 000 zł",
+    forSale: true,
+    mainDescription: {
+      part1:
+        "Projekt obejmuje koncepcję oraz rozwój aplikacji mobilnej użytkowej przeznaczonej na systemy Android oraz iOS. Aplikacja tworzona jest z myślą o publikacji w App Store oraz Google Play jako produkt komercyjny (SaaS).",
+
+      part2:
+        "Głównym celem projektu jest stworzenie nowoczesnej, lekkiej i skalowalnej aplikacji mobilnej, która rozwiązuje realny problem użytkowników poprzez intuicyjny interfejs oraz szybki dostęp do kluczowych funkcji.",
+
+      part3:
+        "W projekcie wykorzystywany jest Nuxt oraz Vue.js do budowy interfejsu użytkownika, Capacitor do konwersji aplikacji na środowisko mobilne oraz Node.js / Next.js jako warstwa backendowa i API. Architektura została zaprojektowana z myślą o dalszym skalowaniu oraz wdrożeniu systemu subskrypcyjnego.",
+
+      part4:
+        "Projekt znajduje się obecnie w fazie rozwoju. Planowana jest implementacja dodatkowych funkcji, integracja płatności oraz przygotowanie aplikacji do publikacji w sklepach App Store i Google Play.",
+
+      part5:
+        "Projekt aplikacji mobilnej jest rozwijany jako produkt cyfrowy typu SaaS, zaprojektowany z myślą o generowaniu przychodu poprzez model subskrypcyjny, reklamy oraz dodatkowe funkcje premium. Aplikacja tworzona jest w technologii Nuxt, Vue, Capacitor, Next.js oraz Node.js i przygotowywana do publikacji w App Store oraz Google Play. Produkt obejmuje pełną koncepcję biznesową, branding oraz architekturę umożliwiającą dalsze skalowanie. Projekt przewidziany jest jako komercyjny produkt z orientacyjnymi widełkami wartości rynkowej od 10 000 do 50 000 zł w zależności od zakresu funkcjonalności i etapu rozwoju.",
+    },
+
+    gallery: ["/images/portfolio/mockup.jpg"],
+  },
+
+  PROJECT_7: {
+    title: "Rozwój Marki w Social Media",
+    link: "https://www.facebook.com/GospodarstwoOgrodniczeKulaJan",
+    subtitle: "Facebook, Meta Business, Canva, Marketing",
+    image: "/images/portfolio/social-garden/mockup.jpg",
+    isLive: true,
+
+    mainDescription: {
+      part1:
+        "Projekt obejmował kompleksowe prowadzenie i rozwój firmowego profilu Gospodarstwa Ogrodniczego Kula Jan na Facebooku. Celem działań było zwiększenie rozpoznawalności marki, prezentacja oferty roślin oraz budowanie relacji z klientami poprzez regularną komunikację w mediach społecznościowych.",
+
+      part2:
+        "Odpowiadałem za przygotowywanie oraz publikację treści promocyjnych, informacyjnych i edukacyjnych. Tworzyłem posty prezentujące ofertę roślin, sezonowe nowości oraz materiały wspierające sprzedaż produktów firmy.",
+
+      part3:
+        "W ramach projektu projektowałem grafiki marketingowe w Canva, przygotowywałem materiały wizualne do publikacji oraz dbałem o spójną identyfikację wizualną marki. Tworzyłem również grafiki edukacyjne wyjaśniające funkcjonalności strony internetowej oraz sposób prezentacji oferty roślin.",
+
+      part4:
+        "Zajmowałem się także przygotowywaniem zdjęć produktów, aktualizacją informacji firmowych, organizacją wyróżnionych relacji oraz integracją działań prowadzonych na Facebooku z firmową stroną internetową. Wszystkie publikowane treści były dostosowywane do aktualnego sezonu sprzedażowego oraz potrzeb klientów.",
+
+      part5:
+        "Projekt pozwolił mi zdobyć praktyczne doświadczenie w zakresie Social Media Management, Content Marketingu, projektowania materiałów graficznych, budowania identyfikacji wizualnej marki oraz prowadzenia komunikacji marketingowej dla lokalnego biznesu.",
+    },
+
+    gallery: [
+      "/images/portfolio/social-garden/main.jpg",
+      "/images/portfolio/social-garden/gallery.jpg",
+      "/images/portfolio/social-garden/new-site.jpg",
+      "/images/portfolio/social-garden/faq.jpg",
+    ],
+  },
+
+  PROJECT_8: {
     title: "Strona internetowa „Zielony Zakątek”",
     subtitle: "HTML, CSS, Bootstrap",
     image: "/images/portfolio/zielony-zakatek/main.jpg",
@@ -133,7 +237,7 @@ const ArticlesEnum = Object.freeze({
     ],
   },
 
-  PROJECT_6: {
+  PROJECT_9: {
     title: "Strona biznesowa dla Architekta Wnętrz",
     subtitle: "HTML, CSS, Bootstrap",
     image: "/images/portfolio/strona-architekta/main.jpg",
@@ -156,7 +260,7 @@ const ArticlesEnum = Object.freeze({
     ],
   },
 
-  PROJECT_7: {
+  PROJECT_10: {
     title: "Praca dyplomowa inżynierska",
     subtitle: "C#, .NET, HTML, CSS, JS, MSSQL",
     image: "/images/portfolio/praca-inzynierska/main.jpg",
@@ -179,7 +283,7 @@ const ArticlesEnum = Object.freeze({
     ],
   },
 
-  PROJECT_8: {
+  PROJECT_11: {
     title: "Ogólne projekty",
     subtitle: "Canva, Blender, Meta Ads, Google Ads",
     image: "/images/portfolio/ogolne-projekty/brand-logo.jpg",
@@ -203,31 +307,6 @@ const ArticlesEnum = Object.freeze({
       "/images/portfolio/ogolne-projekty/shampoo.jpg",
       "/images/portfolio/ogolne-projekty/shampoo-two.jpg",
     ],
-  },
-
-  PROJECT_9: {
-    title: "Aplikacja mobilna użytkowa (SaaS / Mobile App)",
-    subtitle: "Nuxt, Vue, Capacitor, Next.js, Node.js",
-    image: "/images/portfolio/mockup.jpg",
-    forSale: true,
-    mainDescription: {
-      part1:
-        "Projekt obejmuje koncepcję oraz rozwój aplikacji mobilnej użytkowej przeznaczonej na systemy Android oraz iOS. Aplikacja tworzona jest z myślą o publikacji w App Store oraz Google Play jako produkt komercyjny (SaaS).",
-
-      part2:
-        "Głównym celem projektu jest stworzenie nowoczesnej, lekkiej i skalowalnej aplikacji mobilnej, która rozwiązuje realny problem użytkowników poprzez intuicyjny interfejs oraz szybki dostęp do kluczowych funkcji.",
-
-      part3:
-        "W projekcie wykorzystywany jest Nuxt oraz Vue.js do budowy interfejsu użytkownika, Capacitor do konwersji aplikacji na środowisko mobilne oraz Node.js / Next.js jako warstwa backendowa i API. Architektura została zaprojektowana z myślą o dalszym skalowaniu oraz wdrożeniu systemu subskrypcyjnego.",
-
-      part4:
-        "Projekt znajduje się obecnie w fazie rozwoju. Planowana jest implementacja dodatkowych funkcji, integracja płatności oraz przygotowanie aplikacji do publikacji w sklepach App Store i Google Play.",
-
-      part5:
-        "Projekt aplikacji mobilnej jest rozwijany jako produkt cyfrowy typu SaaS, zaprojektowany z myślą o generowaniu przychodu poprzez model subskrypcyjny, reklamy oraz dodatkowe funkcje premium. Aplikacja tworzona jest w technologii Nuxt, Vue, Capacitor, Next.js oraz Node.js i przygotowywana do publikacji w App Store oraz Google Play. Produkt obejmuje pełną koncepcję biznesową, branding oraz architekturę umożliwiającą dalsze skalowanie. Projekt przewidziany jest jako komercyjny produkt z orientacyjnymi widełkami wartości rynkowej od 10 000 do 50 000 zł w zależności od zakresu funkcjonalności i etapu rozwoju.",
-    },
-
-    gallery: ["/images/portfolio/mockup.jpg"],
   },
 });
 
