@@ -75,12 +75,12 @@ export const SkillsPercentData = [
     skillColor: "#786337",
   },
   {
-    skillName: "AI Content Creation / Automation",
+    skillName: "AI Content Creation/Automation",
     skillPercent: 45,
     skillColor: "#0c3854",
   },
   {
-    skillName: "Shoper",
+    skillName: "Shoper/Shopify",
     skillPercent: 65,
     skillColor: "#640707",
   },

@@ -7,6 +7,7 @@
       :title="project.title"
       :subtitle="project.subtitle"
       :for-sale="project.forSale ?? false"
+      :is-live="project.isLive ?? false"
       @click="openModal(project, index)"
     ></ArticleCard>
   </div>

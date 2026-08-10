@@ -7,9 +7,15 @@
   >
     <div
       v-if="forSale"
-      class="ribbon"
+      class="ribbon ribbon--sale"
     >
-      <span>Na sprzedaż</span>
+      Na sprzedaż
+    </div>
+    <div
+      v-if="isLive"
+      class="ribbon ribbon--live"
+    >
+      Live
     </div>
     <div class="portfolio-content">
       <div class="portfolio-img">
@@ -43,6 +49,7 @@ defineProps({
     type: String,
   },
   forSale: { type: Boolean, default: false },
+  isLive: { type: Boolean, default: false },
 });
 </script>
 
@@ -65,13 +72,10 @@ defineProps({
 
   .ribbon {
     position: absolute;
-    top: 23px;
-    right: -35px;
-    width: 140px;
-    background-color: #2ecc71;
+    width: 210px;
     color: #fff;
     font-size: 11px;
-    font-weight: 700;
+    font-weight: 400;
     letter-spacing: 0.05em;
     text-transform: uppercase;
     text-align: center;
@@ -80,6 +84,18 @@ defineProps({
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
     pointer-events: none;
     z-index: 10;
+
+    &--sale {
+      top: 23px;
+      right: -72px;
+      background-color: #2ecc71;
+    }
+
+    &--live {
+      top: 23px;
+      right: -72px;
+      background-color: #3498db; // niebieski
+    }
   }
 
   .portfolio-content {
